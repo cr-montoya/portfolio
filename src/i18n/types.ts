@@ -36,7 +36,28 @@ export interface Translations {
   }
   about: {
     title: string
-    body: string
+    eyebrow: string
+    body: string[]
+    focusTitle: string
+    focus: {
+      aws: string
+      iac: string
+      cicd: string
+      security: string
+      observability: string
+    }
+    current: {
+      label: string
+      value: string
+    }
+    visual: {
+      roleLabel: string
+      roleValue: string
+      locationLabel: string
+      locationValue: string
+      stackLabel: string
+      stackValue: string
+    }
   }
   skills: {
     title: string

@@ -37,7 +37,32 @@ export const en = {
   },
   about: {
     title: 'About',
-    body: 'DevOps and cloud engineering portfolio focused on automation, reliability, and practical delivery.',
+    eyebrow: 'production cloud, built with intent',
+    body: [
+      'I am a Senior AWS DevOps Engineer based in Medellín, Colombia, with 4+ years designing, automating, securing, and operating resilient production cloud environments.',
+      'My work centers on infrastructure as code, CI/CD, containerized workloads, cloud networking, observability, backup, and disaster recovery practices.',
+      'I have led AWS infrastructure initiatives from architecture and Terraform implementation to delivery automation, while supporting SOC2/HIPAA compliance and stronger security controls.',
+    ],
+    focusTitle: 'focus areas',
+    focus: {
+      aws: 'AWS cloud infrastructure',
+      iac: 'Terraform & IaC',
+      cicd: 'CI/CD automation',
+      security: 'Security & compliance',
+      observability: 'Observability',
+    },
+    current: {
+      label: 'currently',
+      value: 'AWS DevOps Engineer Professional certified',
+    },
+    visual: {
+      roleLabel: 'role',
+      roleValue: 'DevOps & Security Tech Lead',
+      locationLabel: 'location',
+      locationValue: 'Medellín, Colombia',
+      stackLabel: 'stack',
+      stackValue: 'AWS · Terraform · CI/CD · Security',
+    },
   },
   skills: {
     title: 'Skills',
