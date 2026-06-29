@@ -80,7 +80,7 @@ The component receives pre-translated strings — it does NOT call `useTranslati
 ```ts
 // Props interface at the top of the component file
 export interface SkillBadgeProps {
-  name: string        // already translated by parent
+  name: string // already translated by parent
   level: Skill['level']
   icon: string
 }
@@ -89,6 +89,7 @@ export interface SkillBadgeProps {
 ### Step 7 — Section (`src/sections/`)
 
 The section owns the i18n + data boundary. It:
+
 1. Calls `useTranslation()`
 2. Imports from `src/data/`
 3. Maps data to component props, resolving i18n keys
@@ -104,13 +105,8 @@ export function Skills() {
   return (
     <SectionWrapper id="skills">
       <SectionTitle prefix=">" label={t.skills.title} />
-      {skills.map(skill => (
-        <SkillBadge
-          key={skill.name}
-          name={skill.name}
-          level={skill.level}
-          icon={skill.icon}
-        />
+      {skills.map((skill) => (
+        <SkillBadge key={skill.name} name={skill.name} level={skill.level} icon={skill.icon} />
       ))}
     </SectionWrapper>
   )

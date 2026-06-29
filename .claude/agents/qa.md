@@ -43,6 +43,7 @@ npm test             # all tests must pass
 - SEO = 100
 
 Run locally with:
+
 ```bash
 npm run build && npm run preview
 # Then run Lighthouse in Chrome DevTools or via CLI

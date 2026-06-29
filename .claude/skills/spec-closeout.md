@@ -8,6 +8,7 @@ tools:
 ---
 
 You verify that an implemented spec is ready for PR. You check two things:
+
 1. All acceptance criteria are met or explicitly deferred.
 2. The implementation has not drifted from what the spec described (harness-sync check).
 

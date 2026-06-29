@@ -38,6 +38,7 @@ gh run list --repo cr-montoya/portfolio --workflow release.yml --limit 3
 ## If the release did not trigger
 
 Check that:
+
 - The merged commits include at least one `feat:` or `fix:` type.
 - `release.yml` has `contents: write` and `issues: write` permissions.
 - `GITHUB_TOKEN` is available (it is by default for public repos).

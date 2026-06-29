@@ -16,21 +16,23 @@ The ponytail skill is active on every implementation task. No opt-out without ex
 
 ## Portfolio-specific applications
 
-| Situation | Lazy first move |
-|-----------|----------------|
-| Need a date display | `new Date().toLocaleDateString()` not a date library |
-| Need smooth scroll to section | `scroll-behavior: smooth` in CSS, not a scroll library |
-| Need a tooltip | `title` attribute or `<details>` before a tooltip component |
-| Need icons | SVG inline or a single icon sprite, not an icon library unless already installed |
-| Need a grid layout | Tailwind `grid grid-cols-3`, not a layout component |
-| Need animation | Tailwind `transition`, `animate-*`, or CSS `@keyframes` before a motion library |
-| Need a modal | `<dialog>` native element before a modal library |
+| Situation                     | Lazy first move                                                                  |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| Need a date display           | `new Date().toLocaleDateString()` not a date library                             |
+| Need smooth scroll to section | `scroll-behavior: smooth` in CSS, not a scroll library                           |
+| Need a tooltip                | `title` attribute or `<details>` before a tooltip component                      |
+| Need icons                    | SVG inline or a single icon sprite, not an icon library unless already installed |
+| Need a grid layout            | Tailwind `grid grid-cols-3`, not a layout component                              |
+| Need animation                | Tailwind `transition`, `animate-*`, or CSS `@keyframes` before a motion library  |
+| Need a modal                  | `<dialog>` native element before a modal library                                 |
 
 ## Mark deliberate simplifications
 
 ```tsx
-{/* ponytail: native dialog, add focus-trap lib if a11y requires it */}
-<dialog ref={dialogRef}>...</dialog>
+{
+  /* ponytail: native dialog, add focus-trap lib if a11y requires it */
+}
+;<dialog ref={dialogRef}>...</dialog>
 ```
 
 ## When NOT to simplify

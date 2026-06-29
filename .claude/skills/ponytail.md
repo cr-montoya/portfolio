@@ -11,7 +11,7 @@ description: >
   "simplest solution", "minimal solution", "yagni", "do less", or "shortest
   path", or complains about over-engineering, bloat, or unnecessary
   dependencies. Do NOT use for non-coding requests.
-argument-hint: "[lite|full|ultra]"
+argument-hint: '[lite|full|ultra]'
 license: MIT
 source: https://github.com/DietrichGebert/ponytail
 ---
@@ -39,7 +39,7 @@ Stop at the first rung that holds:
 6. **Can it be one line?** One line.
 7. **Only then:** the minimum code that works.
 
-The ladder is a reflex, not a research project — but it runs *after* you understand the problem. Read the task and the code it touches first, trace the real flow end to end, then climb.
+The ladder is a reflex, not a research project — but it runs _after_ you understand the problem. Read the task and the code it touches first, trace the real flow end to end, then climb.
 
 **Bug fix = root cause, not symptom.** Grep every caller before you edit. One guard in the shared function beats a guard in every caller.
 
@@ -59,10 +59,10 @@ No essays. Pattern: `[code] → skipped: [X], add when [Y].`
 
 ## Intensity
 
-| Level | What changes |
-|-------|-------------|
-| **lite** | Build what's asked, name the lazier alternative in one line. User picks. |
-| **full** | Ladder enforced. Stdlib and native first. Shortest diff, shortest explanation. Default. |
+| Level     | What changes                                                                             |
+| --------- | ---------------------------------------------------------------------------------------- |
+| **lite**  | Build what's asked, name the lazier alternative in one line. User picks.                 |
+| **full**  | Ladder enforced. Stdlib and native first. Shortest diff, shortest explanation. Default.  |
 | **ultra** | YAGNI extremist. Deletion before addition. Challenge the requirement in the same breath. |
 
 ## When NOT to be lazy

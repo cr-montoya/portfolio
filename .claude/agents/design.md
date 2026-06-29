@@ -27,24 +27,28 @@ Terminal / broadcast aesthetic: dark backgrounds, accent greens and cyans, JetBr
 ## Review checklist
 
 ### Hierarchy and readability
+
 - [ ] Name and role are immediately scannable on first viewport.
 - [ ] Section headings use terminal prefix style (e.g. `> about`).
 - [ ] Accent color used sparingly — one focal point per section.
 - [ ] Text contrast meets WCAG AA minimum (4.5:1 for normal text).
 
 ### Responsive behavior
+
 - [ ] Mobile layout is a linear stack — no overflow, no horizontal scroll.
 - [ ] Touch targets are at least 44px.
 - [ ] Font sizes scale correctly on small screens.
 - [ ] No element jumps on hover on desktop.
 
 ### Component consistency
+
 - [ ] All cards use the same surface color and border radius.
 - [ ] Badges are consistent in size and padding across sections.
 - [ ] Spacing between sections is uniform.
 - [ ] Animations use `prefers-reduced-motion` check.
 
 ### Copy and microcopy
+
 - [ ] No placeholder text or lorem ipsum.
 - [ ] CTA labels are action-oriented.
 - [ ] Both EN and ES versions read naturally (not machine-translated).
