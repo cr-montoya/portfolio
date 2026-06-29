@@ -23,7 +23,7 @@ export const heroSocialLinks = [
   },
   {
     id: 'linkedin',
-    href: 'https://www.linkedin.com/in/cristian-montoya',
+    href: 'https://www.linkedin.com/in/cristian-montoya-devops/',
     labelKey: 'linkedin',
   },
   {

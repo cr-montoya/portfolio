@@ -62,6 +62,43 @@ export interface Translations {
   skills: {
     title: string
     description: string
+    categories: {
+      cloud: string
+      iac: string
+      cicd: string
+      languages: string
+      observability: string
+      security: string
+    }
+    levels: {
+      expert: string
+      advanced: string
+      familiar: string
+    }
+    items: {
+      aws: string
+      ec2: string
+      lambda: string
+      s3: string
+      terraform: string
+      cdk: string
+      cloudformation: string
+      sam: string
+      githubActions: string
+      codepipeline: string
+      codebuild: string
+      codedeploy: string
+      python: string
+      typescript: string
+      bash: string
+      cloudwatch: string
+      xray: string
+      grafana: string
+      iam: string
+      guardduty: string
+      securityHub: string
+      awsConfig: string
+    }
   }
   projects: {
     title: string

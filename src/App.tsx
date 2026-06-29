@@ -3,6 +3,7 @@ import { Navbar } from '@/components/Navbar'
 import { localeOptions, useTranslation } from '@/i18n'
 import { About } from '@/sections/About'
 import { Hero } from '@/sections/Hero'
+import { Skills } from '@/sections/Skills'
 import type { Locale } from '@/types/locale'
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
       </main>
     </div>
   )
