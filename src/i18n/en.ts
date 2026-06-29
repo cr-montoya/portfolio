@@ -184,8 +184,26 @@ export const en = {
   },
   contact: {
     title: 'Contact',
-    description: 'Reach out for cloud, DevOps, and platform engineering opportunities.',
+    description:
+      'Open to senior DevOps, platform engineering, cloud security, and infrastructure automation conversations.',
     cta: 'Start a conversation',
+    eyebrow: 'ready to build production-grade cloud',
+    availability: 'Based in Medellín, Colombia · available for remote collaboration',
+    labels: {
+      open: 'open',
+    },
+    links: {
+      email: 'Email',
+      linkedin: 'LinkedIn',
+      github: 'GitHub',
+    },
+    linkDescriptions: {
+      email: 'Send a direct message to Cristian.',
+      linkedin: 'Connect through the professional profile.',
+      github: 'Review public repositories and engineering work.',
+    },
+    footer:
+      '© 2026 Cristian Montoya. Built with React, TypeScript, Tailwind, and Cloudflare Pages.',
   },
   common: {
     currentLanguage: 'Current language',

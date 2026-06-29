@@ -3,6 +3,7 @@ import { Navbar } from '@/components/Navbar'
 import { localeOptions, useTranslation } from '@/i18n'
 import { About } from '@/sections/About'
 import { Certifications } from '@/sections/Certifications'
+import { Contact } from '@/sections/Contact'
 import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
 import { Projects } from '@/sections/Projects'
@@ -46,6 +47,7 @@ export default function App() {
         <Projects />
         <Experience />
         <Certifications />
+        <Contact />
       </main>
     </div>
   )
