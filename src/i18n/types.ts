@@ -13,11 +13,26 @@ export interface Translations {
     languageToggle: string
   }
   hero: {
+    eyebrow: string
     title: string
     subtitle: string
     description: string
-    ctaProjects: string
-    ctaContact: string
+    terminal: {
+      whoamiCommand: string
+      whoamiResult: string
+      planCommand: string
+      planResult: string
+    }
+    actions: {
+      projects: string
+      contact: string
+    }
+    social: {
+      github: string
+      linkedin: string
+      email: string
+    }
+    scrollIndicator: string
   }
   about: {
     title: string

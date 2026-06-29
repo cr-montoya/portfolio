@@ -13,11 +13,27 @@ export const en = {
     languageToggle: 'Select language',
   },
   hero: {
+    eyebrow: "hi, i'm",
     title: 'Cristian Montoya',
-    subtitle: 'DevOps & Cloud Engineer',
-    description: 'Building reliable cloud platforms, automation, and delivery pipelines.',
-    ctaProjects: 'View projects',
-    ctaContact: 'Contact me',
+    subtitle: 'Senior AWS DevOps Engineer',
+    description:
+      'Designing, automating, and securing production cloud environments on AWS — Terraform, CI/CD, and DevSecOps for 4+ years.',
+    terminal: {
+      whoamiCommand: 'whoami',
+      whoamiResult: 'cristian-montoya — senior devops engineer',
+      planCommand: 'terraform plan',
+      planResult: '4+ years experience · production-ready',
+    },
+    actions: {
+      projects: 'view projects',
+      contact: 'get in touch',
+    },
+    social: {
+      github: 'GitHub profile',
+      linkedin: 'LinkedIn profile',
+      email: 'Email Cristian Montoya',
+    },
+    scrollIndicator: 'Scroll to about section',
   },
   about: {
     title: 'About',
