@@ -1,6 +1,7 @@
 import { LanguageToggle } from '@/components/LanguageToggle'
 import { Navbar } from '@/components/Navbar'
 import { localeOptions, useTranslation } from '@/i18n'
+import { Hero } from '@/sections/Hero'
 import type { Locale } from '@/types/locale'
 
 export default function App() {
@@ -33,6 +34,9 @@ export default function App() {
         }
         links={navLinks}
       />
+      <main>
+        <Hero />
+      </main>
     </div>
   )
 }
