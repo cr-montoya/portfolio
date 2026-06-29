@@ -2,6 +2,7 @@ import { LanguageToggle } from '@/components/LanguageToggle'
 import { Navbar } from '@/components/Navbar'
 import { localeOptions, useTranslation } from '@/i18n'
 import { About } from '@/sections/About'
+import { Certifications } from '@/sections/Certifications'
 import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
 import { Projects } from '@/sections/Projects'
@@ -44,6 +45,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Experience />
+        <Certifications />
       </main>
     </div>
   )

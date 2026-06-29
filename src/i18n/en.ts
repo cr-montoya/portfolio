@@ -176,6 +176,11 @@ export const en = {
   certifications: {
     title: 'Certifications',
     description: 'Cloud and engineering credentials that support the work.',
+    labels: {
+      expires: 'Expires',
+      issued: 'Issued',
+      badgeAlt: 'badge',
+    },
   },
   contact: {
     title: 'Contact',
