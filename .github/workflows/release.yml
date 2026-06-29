@@ -29,10 +29,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --ignore-scripts
-
-      - name: Build native binaries
-        run: pnpm rebuild esbuild
+        run: pnpm install --frozen-lockfile
 
       - name: Release
         run: pnpm dlx semantic-release
