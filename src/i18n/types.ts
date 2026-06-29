@@ -164,6 +164,22 @@ export interface Translations {
     title: string
     description: string
     cta: string
+    eyebrow: string
+    availability: string
+    labels: {
+      open: string
+    }
+    links: {
+      email: string
+      linkedin: string
+      github: string
+    }
+    linkDescriptions: {
+      email: string
+      linkedin: string
+      github: string
+    }
+    footer: string
   }
   common: {
     currentLanguage: string
