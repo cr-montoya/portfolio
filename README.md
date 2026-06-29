@@ -12,13 +12,13 @@ Personal portfolio landing page — DevOps & Cloud Engineer.
 ## Development
 
 ```bash
-npm install
-npm run dev        # http://localhost:5173
-npm run build
-npm run preview
-npm run type-check
-npm run lint
-npm test
+pnpm install
+pnpm dev        # http://localhost:5173
+pnpm build
+pnpm preview
+pnpm type-check
+pnpm lint
+pnpm test
 ```
 
 ## Architecture
@@ -38,6 +38,24 @@ See [CLAUDE.md](./CLAUDE.md) for full harness rules, conventions, and workflow.
 - Every merge to `main` triggers a GitHub Release via semantic-release.
 - Cloudflare Pages deploys automatically on merge.
 
+## Deployment
+
+Cloudflare Pages is connected to GitHub and deploys automatically.
+
+| Setting            | Value                    |
+| ------------------ | ------------------------ |
+| Production branch  | `main`                   |
+| Build command      | `pnpm build`             |
+| Build output       | `dist`                   |
+| Preview deployment | Pull requests / branches |
+
+Deployment metadata lives in `public/` and is copied into `dist` by Vite:
+
+- `robots.txt`
+- `sitemap.xml`
+- `_headers`
+- `_redirects`
+
 ## Releases
 
 Releases are created automatically from [conventional commits](https://www.conventionalcommits.org/):
@@ -50,6 +68,6 @@ Releases are created automatically from [conventional commits](https://www.conve
 
 ## Links
 
-- [Live site](https://portfolio.pages.dev) _(pending custom domain)_
+- [Live site](https://romanops.dev)
 - [GitHub Issues — specs and roadmap](https://github.com/cr-montoya/portfolio/issues)
 - [Releases](https://github.com/cr-montoya/portfolio/releases)
