@@ -37,7 +37,32 @@ export const es = {
   },
   about: {
     title: 'Sobre mí',
-    body: 'Portafolio de DevOps e ingeniería cloud enfocado en automatización, confiabilidad y entrega práctica.',
+    eyebrow: 'cloud productivo, construido con intención',
+    body: [
+      'Soy Ingeniero Senior AWS DevOps en Medellín, Colombia, con más de 4 años diseñando, automatizando, asegurando y operando entornos cloud productivos y resilientes.',
+      'Mi trabajo se enfoca en infraestructura como código, CI/CD, cargas contenerizadas, redes cloud, observabilidad, backups y prácticas de recuperación ante desastres.',
+      'He liderado iniciativas de infraestructura AWS desde arquitectura e implementación con Terraform hasta automatización de entrega, apoyando cumplimiento SOC2/HIPAA y controles de seguridad más sólidos.',
+    ],
+    focusTitle: 'áreas de enfoque',
+    focus: {
+      aws: 'Infraestructura AWS',
+      iac: 'Terraform e IaC',
+      cicd: 'Automatización CI/CD',
+      security: 'Seguridad y compliance',
+      observability: 'Observabilidad',
+    },
+    current: {
+      label: 'actualmente',
+      value: 'AWS DevOps Engineer Professional certificado',
+    },
+    visual: {
+      roleLabel: 'rol',
+      roleValue: 'DevOps & Security Tech Lead',
+      locationLabel: 'ubicación',
+      locationValue: 'Medellín, Colombia',
+      stackLabel: 'stack',
+      stackValue: 'AWS · Terraform · CI/CD · Seguridad',
+    },
   },
   skills: {
     title: 'Habilidades',
