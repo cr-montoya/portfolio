@@ -42,14 +42,14 @@ See [CLAUDE.md](./CLAUDE.md) for full harness rules, conventions, and workflow.
 
 Releases are created automatically from [conventional commits](https://www.conventionalcommits.org/):
 
-| Commit prefix | Release type |
-|---|---|
-| `feat:` | Minor |
-| `fix:` | Patch |
-| `BREAKING CHANGE` | Major |
+| Commit prefix     | Release type |
+| ----------------- | ------------ |
+| `feat:`           | Minor        |
+| `fix:`            | Patch        |
+| `BREAKING CHANGE` | Major        |
 
 ## Links
 
-- [Live site](https://portfolio.pages.dev) *(pending custom domain)*
+- [Live site](https://portfolio.pages.dev) _(pending custom domain)_
 - [GitHub Issues — specs and roadmap](https://github.com/cr-montoya/portfolio/issues)
 - [Releases](https://github.com/cr-montoya/portfolio/releases)

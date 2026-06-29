@@ -63,6 +63,7 @@ const t = useTranslation()
 ## Scroll targeting
 
 All sections receive an `id` matching the nav link href:
+
 - `#hero`, `#about`, `#skills`, `#projects`, `#experience`, `#certifications`, `#contact`
 
 ## Ponytail mark pattern
@@ -70,9 +71,11 @@ All sections receive an `id` matching the nav link href:
 Deliberate simplifications are marked inline:
 
 ```tsx
-{/* ponytail: <reason>, upgrade when <condition> */}
+{
+  /* ponytail: <reason>, upgrade when <condition> */
+}
 ```
 
 ---
 
-*Add new patterns as they emerge from the first implemented sections.*
+_Add new patterns as they emerge from the first implemented sections._

@@ -38,4 +38,4 @@ Active decisions that shape every implementation choice. Updated when a decision
 
 ---
 
-*Add new decisions here when made. Include date and the alternative considered.*
+_Add new decisions here when made. Include date and the alternative considered._

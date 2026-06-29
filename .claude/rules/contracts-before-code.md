@@ -35,7 +35,7 @@ import type { Translations } from '@/i18n/types'
 
 export interface Project {
   id: string
-  titleKey: keyof Translations['projects']      // ← fails if key doesn't exist in i18n
+  titleKey: keyof Translations['projects'] // ← fails if key doesn't exist in i18n
   descriptionKey: keyof Translations['projects'] // ← same guarantee
 }
 ```

@@ -4,14 +4,14 @@ Enforced on every file edit. Check BEFORE writing and AFTER writing.
 
 ## Allowed imports per layer
 
-| Layer | May import from |
-|-------|----------------|
-| `src/components/ui/` (Primitives) | React, external libs, `src/types/` only |
-| `src/components/` (Components) | Primitives, React, external libs, `src/types/` only |
-| `src/sections/` (Sections) | Components, Primitives, `src/data/`, `src/i18n/`, `src/types/` |
-| `src/data/` | `src/types/` only |
-| `src/i18n/` | `src/types/` only |
-| `src/App.tsx` | Sections, Components, `src/i18n/`, `src/types/` |
+| Layer                             | May import from                                                |
+| --------------------------------- | -------------------------------------------------------------- |
+| `src/components/ui/` (Primitives) | React, external libs, `src/types/` only                        |
+| `src/components/` (Components)    | Primitives, React, external libs, `src/types/` only            |
+| `src/sections/` (Sections)        | Components, Primitives, `src/data/`, `src/i18n/`, `src/types/` |
+| `src/data/`                       | `src/types/` only                                              |
+| `src/i18n/`                       | `src/types/` only                                              |
+| `src/App.tsx`                     | Sections, Components, `src/i18n/`, `src/types/`                |
 
 ## Violations — stop immediately if found
 

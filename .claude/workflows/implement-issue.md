@@ -43,16 +43,17 @@ git checkout -b feat/<N>-<short-description>
 
 ### 4. Pre-implementation agents (per gate matrix)
 
-| If the Issue touches... | Run agent |
-|-------------------------|-----------|
-| UI, layout, visual copy | design |
-| Cloudflare config, env vars, CSP | security |
+| If the Issue touches...          | Run agent |
+| -------------------------------- | --------- |
+| UI, layout, visual copy          | design    |
+| Cloudflare config, env vars, CSP | security  |
 
 ### 5. Implement with task-runner
 
 Invoke skill: `task-runner` for each task in the Issue.
 
 Rules active during implementation:
+
 - `.claude/rules/harness-layers.md` — check before and after every file edit
 - `.claude/rules/contracts-before-code.md` — types first, then implementation
 - `.claude/rules/no-hardcode-strings.md` — all text via useTranslation()
@@ -60,12 +61,12 @@ Rules active during implementation:
 
 ### 6. Post-implementation agents (per gate matrix)
 
-| Change type | Required agents |
-|-------------|----------------|
-| New section / visual change | design, qa, code-quality, reviewer |
-| New component / design system | design, code-quality, reviewer |
-| Data shape / i18n | code-quality, reviewer |
-| CI/CD / infra | security, qa, reviewer |
+| Change type                   | Required agents                    |
+| ----------------------------- | ---------------------------------- |
+| New section / visual change   | design, qa, code-quality, reviewer |
+| New component / design system | design, code-quality, reviewer     |
+| Data shape / i18n             | code-quality, reviewer             |
+| CI/CD / infra                 | security, qa, reviewer             |
 
 ### 7. Run spec-closeout
 
@@ -105,6 +106,7 @@ Invoke skill: `release` to verify semantic-release ran and GitHub Release was cr
 ## Fast path (chore/docs only)
 
 For `chore:` or `docs:` changes with no spec Issue:
+
 - Skip steps 1–4 and 6–7.
 - Still use `commit` skill and `pr-prep`.
 - Still require CI pass and human approval.

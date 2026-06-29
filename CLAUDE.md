@@ -80,34 +80,43 @@ Every spec Issue follows this structure (adapted from [spec-kit](https://github.
 
 ```markdown
 ## Objective
+
 [What this change accomplishes and why it matters.]
 
 ## Scope
+
 - [Included behavior]
 
 ## Out of scope
+
 - [Explicitly excluded behavior]
 
 ## User Scenarios
 
 ### Scenario 1 — [Title] (P1)
+
 **Given** [initial state], **When** [user action], **Then** [expected outcome].
 **Independent test**: [how to verify this alone]
 
 ### Scenario 2 — [Title] (P2)
+
 ...
 
 ## Functional Requirements
+
 - **FR-001**: System MUST [specific verifiable behavior]
 - **FR-002**: [...]
 
 ## Contracts (if applicable)
+
 [TypeScript interfaces for data shapes, props, or i18n keys]
 
 ## Acceptance Criteria
+
 - [ ] [Observable outcome tied to FR or scenario]
 
 ## Gates
+
 - Design: pending / passed / not_applicable
 - QA: pending / passed
 - Code Quality: pending / passed
@@ -140,14 +149,14 @@ A spec Issue may be closed when:
 
 ### Gate matrix
 
-| Change type | Required gates |
-| --- | --- |
-| New section / visual change | Design, QA, Code Quality, Reviewer |
-| New component / design system | Design, Code Quality, Reviewer |
-| Data shape / i18n structure | Code Quality, Reviewer |
-| CI/CD / Cloudflare / infra | Security, QA, Reviewer |
-| Docs / issue specs only | Reviewer optional |
-| Bug fix | QA, Code Quality, Reviewer |
+| Change type                   | Required gates                     |
+| ----------------------------- | ---------------------------------- |
+| New section / visual change   | Design, QA, Code Quality, Reviewer |
+| New component / design system | Design, Code Quality, Reviewer     |
+| Data shape / i18n structure   | Code Quality, Reviewer             |
+| CI/CD / Cloudflare / infra    | Security, QA, Reviewer             |
+| Docs / issue specs only       | Reviewer optional                  |
+| Bug fix                       | QA, Code Quality, Reviewer         |
 
 ## Rules (enforced on every implementation)
 
@@ -248,7 +257,7 @@ Each release creates a GitHub Release with auto-generated changelog.
 - All section data comes from `data/` — no data literals in component files.
 - No `any` in TypeScript.
 - No CSS modules or styled-components — Tailwind only.
-- No `npm` or `yarn` — use `npm` (this project uses npm).
+- No `npm` or `yarn` — use `pnpm` always.
 - Secrets never go in the client bundle. No `VITE_*` prefixed secrets.
 
 ## Design
@@ -258,6 +267,7 @@ headings and labels, large scannable text. The visitor should immediately unders
 Cristian is and what he builds — no generic template look.
 
 Design tokens:
+
 - Background: `#0a0e1a` (deep navy)
 - Surface: `#111827`
 - Accent green: `#00ff9d`
@@ -270,13 +280,13 @@ Design tokens:
 ## Commands
 
 ```bash
-npm install
-npm run dev
-npm run build
-npm run preview
-npm run type-check
-npm run lint
-npm test
+pnpm install
+pnpm dev
+pnpm build
+pnpm preview
+pnpm type-check
+pnpm lint
+pnpm test
 ```
 
 ## Git flow
