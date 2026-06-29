@@ -26,7 +26,7 @@ export const certifications: Certification[] = [
     name: 'AWS Knowledge: Security Champion - Training Badge',
     issuer: 'Amazon Web Services Training and Certification',
     badgeImageUrl:
-      'https://images.credly.com/size/340x340/images/478cdcb9-9b92-4893-9c95-617ad0f28257/image.png',
+      'https://images.credly.com/size/340x340/images/478cdcb9-9b92-4893-9c95-617ad0f28257/linkedin_thumb_blob',
     verifyUrl: 'https://www.credly.com/badges/3dc6c7fe-d300-43c4-b2df-c5381115de79',
     issuedDate: '2025-07-11',
   },
