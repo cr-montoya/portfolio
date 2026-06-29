@@ -55,6 +55,11 @@ Deployment metadata lives in `public/` and is copied into `dist` by Vite:
 - `sitemap.xml`
 - `_headers`
 - `_redirects`
+- `404.html`
+- `favicon.svg`
+- `og-image.svg`
+
+Launch verification is tracked in [docs/launch-checklist.md](./docs/launch-checklist.md).
 
 ## Releases
 
