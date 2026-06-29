@@ -149,6 +149,31 @@ A spec Issue may be closed when:
 | Docs / issue specs only | Reviewer optional |
 | Bug fix | QA, Code Quality, Reviewer |
 
+## Rules (enforced on every implementation)
+
+Always-active guardrails. Read before editing any file.
+
+- `.claude/rules/harness-layers.md`: allowed imports per layer + violation examples.
+- `.claude/rules/contracts-before-code.md`: types + i18n keys defined before implementation.
+- `.claude/rules/no-hardcode-strings.md`: all user-facing text via `useTranslation()`.
+- `.claude/rules/issue-first.md`: no code without a linked GitHub Issue.
+- `.claude/rules/ponytail-always.md`: check the YAGNI ladder before writing any code.
+
+## Workflows
+
+Orchestrated multi-step processes for common operations.
+
+- `.claude/workflows/implement-issue.md`: full workflow from Issue to merged PR.
+- `.claude/workflows/new-section.md`: inside-out sequence for adding a portfolio section.
+- `.claude/workflows/hotfix.md`: emergency fix with shortened but safe process.
+
+## Memory
+
+Persistent context. Read when making architectural or pattern decisions.
+
+- `.claude/memory/decisions.md`: active architectural decisions and the alternatives rejected.
+- `.claude/memory/patterns.md`: established code patterns to follow consistently.
+
 ## Available skills
 
 - `.claude/skills/ponytail.md`: enforce minimal code — YAGNI → reuse → stdlib → native → one line. **Always active** for Developer. See skill for intensity levels (lite / full / ultra).
