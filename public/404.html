@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found — Cristian Montoya</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #0a0e1a;
+        --surface: #111827;
+        --border: #30394b;
+        --primary: #f0f6fc;
+        --muted: #8b949e;
+        --green: #00ff9d;
+        --cyan: #00d4ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: var(--background);
+        color: var(--primary);
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        padding: 24px;
+      }
+
+      main {
+        width: min(100%, 720px);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 40px;
+      }
+
+      p,
+      h1 {
+        margin: 0;
+      }
+
+      .command {
+        color: var(--green);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        margin-top: 16px;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: clamp(2rem, 8vw, 4rem);
+        line-height: 1;
+      }
+
+      .copy {
+        margin-top: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      a {
+        display: inline-flex;
+        margin-top: 28px;
+        border: 1px solid var(--green);
+        border-radius: 6px;
+        padding: 12px 18px;
+        color: var(--background);
+        background: var(--green);
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="command">$ curl romanops.dev/unknown</p>
+      <h1>404</h1>
+      <p class="copy">
+        This route is not deployed, but the portfolio is healthy. Return home to continue.
+      </p>
+      <a href="/">cd /home</a>
+    </main>
+  </body>
+</html>

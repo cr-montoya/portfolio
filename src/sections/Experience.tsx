@@ -9,6 +9,11 @@ export function Experience() {
   const entryRefs = useRef(new Map<string, HTMLDivElement>())
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setVisibleEntries(new Set(experienceEntries.map((entry) => entry.id)))
+      return
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         setVisibleEntries((currentEntries) => {
