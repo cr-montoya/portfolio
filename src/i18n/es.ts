@@ -2,12 +2,13 @@ import type { Translations } from './types'
 
 export const es = {
   nav: {
+    brand: '~/cristian',
     home: 'Inicio',
     about: 'Sobre mí',
     skills: 'Habilidades',
     projects: 'Proyectos',
     experience: 'Experiencia',
-    certifications: 'Certificaciones',
+    certifications: 'Certs',
     contact: 'Contacto',
     languageToggle: 'Seleccionar idioma',
   },

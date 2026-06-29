@@ -2,6 +2,7 @@ import type { Locale } from '@/types/locale'
 
 export interface Translations {
   nav: {
+    brand: string
     home: string
     about: string
     skills: string

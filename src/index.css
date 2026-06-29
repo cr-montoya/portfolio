@@ -5,11 +5,19 @@
   --color-background: #0a0e1a;
   --color-surface: #111827;
   --color-surface-hover: #1a2233;
+  --color-surface-muted: #0d1322;
   --color-accent-green: #00ff9d;
   --color-accent-cyan: #00d4ff;
   --color-text-primary: #f0f6fc;
   --color-text-muted: #8b949e;
   --color-border: #21262d;
+  --color-border-strong: #30394b;
+  --color-terminal-green: #00ff9d;
+  --color-terminal-cyan: #00d4ff;
+
+  /* Shadows */
+  --shadow-glow-green: 0 0 24px rgb(0 255 157 / 0.18);
+  --shadow-glow-cyan: 0 0 24px rgb(0 212 255 / 0.14);
 
   /* Fonts */
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -17,9 +25,23 @@
 
   /* Spacing extras */
   --spacing-section: 5rem;
+
+  /* Motion */
+  --animate-cursor-blink: cursor-blink 1s step-end infinite;
 }
 
 @layer base {
+  @keyframes cursor-blink {
+    0%,
+    45% {
+      opacity: 1;
+    }
+    46%,
+    100% {
+      opacity: 0;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
   }
