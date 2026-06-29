@@ -130,7 +130,48 @@ export const es = {
   },
   experience: {
     title: 'Experiencia',
-    description: 'Trayectoria profesional en DevOps, plataformas cloud y operación de sistemas.',
+    description:
+      'Una línea de tiempo enfocada en operación cloud productiva, automatización DevOps, controles de seguridad y mejoras de entrega.',
+    labels: {
+      current: 'actual',
+      present: 'presente',
+      stack: 'stack',
+    },
+    highlights: {
+      soc2: 'SOC2 Type I/II',
+      hipaa: 'Infra HIPAA compliant',
+      delivery: 'Deployments 80% más rápidos',
+      ai: 'Flujos con AI',
+    },
+    roles: {
+      techLead: 'DevOps and Security Tech Lead',
+      devopsSecurityEngineer: 'DevOps and Security Engineer',
+    },
+    accomplishments: {
+      multiCloudLeadership: 'Lidero la operación y evolución de entornos multi-cloud.',
+      awsOwnership:
+        'Soy responsable de iniciativas AWS end-to-end, desde arquitectura e implementación con Terraform hasta integración CI/CD.',
+      complianceSecurity:
+        'Apoyé la obtención de SOC2 Type I el año pasado y SOC2 Type II este año, manteniendo infraestructura productiva HIPAA compliant.',
+      cicdOptimization:
+        'Diseñé sistemas CI/CD con despliegues blue-green en producción, reduciendo riesgo de release y manteniendo plataformas online.',
+      devopsPracticeBuilt:
+        'Construí la práctica DevOps casi desde cero: pipelines, estándares, operación productiva y ownership de infraestructura en la compañía.',
+      teamLeadership:
+        'Lideré y formé ingenieros desde bases entry-level hasta perfiles capaces en infraestructura y delivery.',
+      productionOwnership:
+        'Lideré iniciativas end to end, desde levantamiento de requerimientos y arquitectura hasta implementación, despliegue y operación en producción.',
+      aiWorkflowAdoption:
+        'Integré flujos de ingeniería asistidos por AI en el día a día, incluyendo ejecución guiada por harness y spec-driven development.',
+      automationTransformation:
+        'Convertí delivery semi-manual en un ecosistema DevOps automatizado, construyendo pipelines para productos y entornos.',
+      selfHostedMigration:
+        'Migré flujos de delivery y control de código hacia plataformas self-hosted como GitLab y tooling interno.',
+      terraformConsolidation:
+        'Consolidé infraestructura fragmentada en repositorios Terraform reutilizables y ayudé a establecer bases cloud seguras.',
+      deploymentReduction:
+        'Construí bases iniciales de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo tiempos de despliegue en más de 80%.',
+    },
   },
   certifications: {
     title: 'Certificaciones',

@@ -2,6 +2,7 @@ import { LanguageToggle } from '@/components/LanguageToggle'
 import { Navbar } from '@/components/Navbar'
 import { localeOptions, useTranslation } from '@/i18n'
 import { About } from '@/sections/About'
+import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
 import { Projects } from '@/sections/Projects'
 import { Skills } from '@/sections/Skills'
@@ -42,6 +43,7 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
+        <Experience />
       </main>
     </div>
   )
