@@ -121,6 +121,35 @@ export interface Translations {
   experience: {
     title: string
     description: string
+    labels: {
+      current: string
+      present: string
+      stack: string
+    }
+    highlights: {
+      soc2: string
+      hipaa: string
+      delivery: string
+      ai: string
+    }
+    roles: {
+      techLead: string
+      devopsSecurityEngineer: string
+    }
+    accomplishments: {
+      multiCloudLeadership: string
+      awsOwnership: string
+      complianceSecurity: string
+      cicdOptimization: string
+      devopsPracticeBuilt: string
+      teamLeadership: string
+      productionOwnership: string
+      aiWorkflowAdoption: string
+      automationTransformation: string
+      selfHostedMigration: string
+      terraformConsolidation: string
+      deploymentReduction: string
+    }
   }
   certifications: {
     title: string

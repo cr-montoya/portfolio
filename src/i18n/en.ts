@@ -130,7 +130,48 @@ export const en = {
   },
   experience: {
     title: 'Experience',
-    description: 'Professional background in DevOps, cloud platforms, and systems operations.',
+    description:
+      'A focused timeline of production cloud ownership, DevOps automation, security controls, and delivery improvements.',
+    labels: {
+      current: 'current',
+      present: 'present',
+      stack: 'stack',
+    },
+    highlights: {
+      soc2: 'SOC2 Type I/II',
+      hipaa: 'HIPAA compliant infra',
+      delivery: '80% faster deployments',
+      ai: 'AI-enabled workflows',
+    },
+    roles: {
+      techLead: 'DevOps and Security Tech Lead',
+      devopsSecurityEngineer: 'DevOps and Security Engineer',
+    },
+    accomplishments: {
+      multiCloudLeadership: 'Lead the operation and evolution of multi-cloud environments.',
+      awsOwnership:
+        'Own end-to-end AWS infrastructure initiatives from architecture and Terraform implementation to CI/CD integration.',
+      complianceSecurity:
+        'Helped the company achieve SOC2 Type I last year and SOC2 Type II this year while keeping production infrastructure HIPAA compliant.',
+      cicdOptimization:
+        'Designed CI/CD systems with blue-green production deployments, reducing release risk and keeping customer-facing platforms online.',
+      devopsPracticeBuilt:
+        'Built the DevOps practice from near zero: pipelines, standards, production operations, and infrastructure ownership across the company.',
+      teamLeadership:
+        'Led and mentored engineers from entry-level foundations into capable infrastructure and delivery contributors.',
+      productionOwnership:
+        'Owned initiatives end to end, from requirement discovery and architecture to implementation, deployment, and production operation.',
+      aiWorkflowAdoption:
+        'Integrated AI-assisted engineering workflows into daily delivery, including harness-driven execution and spec-driven development.',
+      automationTransformation:
+        'Turned semi-manual delivery into an automated DevOps ecosystem, building pipelines across products and environments.',
+      selfHostedMigration:
+        'Migrated delivery and source-control workflows toward self-hosted platforms such as GitLab and internal tooling.',
+      terraformConsolidation:
+        'Consolidated fragmented infrastructure code into reusable Terraform repositories and helped establish secure cloud foundations.',
+      deploymentReduction:
+        'Built early delivery foundations with Linux, Docker, CircleCI, and GitLab CI, reducing deployment times by more than 80%.',
+    },
   },
   certifications: {
     title: 'Certifications',
