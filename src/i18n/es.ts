@@ -110,6 +110,23 @@ export const es = {
     title: 'Proyectos',
     description:
       'Trabajo seleccionado en infraestructura cloud, sistemas de entrega y herramientas para desarrolladores.',
+    labels: {
+      featured: 'destacado',
+      repository: 'repositorio',
+      demo: 'demo',
+      language: 'lenguaje',
+    },
+    items: {
+      awsSecurityTitle: 'AWS Account Security Toolkit',
+      awsSecurityDescription:
+        'Automatización de seguridad y guardrails para cuentas AWS, enfocada en remediación IAM, controles base y hardening operativo.',
+      wc2026Title: 'Simulador de Predicciones Mundial 2026',
+      wc2026Description:
+        'Simulador analítico en TypeScript para predicciones de torneo usando modelo Poisson, Monte Carlo e insights asistidos por IA.',
+      devopsPracticeTitle: 'AWS DevOps Pro Practice',
+      devopsPracticeDescription:
+        'Repositorio de práctica para patrones AWS DevOps Professional con Python, SAM/CDK, flujos CI/CD y ejemplos de observabilidad.',
+    },
   },
   experience: {
     title: 'Experiencia',
