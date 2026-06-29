@@ -103,6 +103,20 @@ export interface Translations {
   projects: {
     title: string
     description: string
+    labels: {
+      featured: string
+      repository: string
+      demo: string
+      language: string
+    }
+    items: {
+      awsSecurityTitle: string
+      awsSecurityDescription: string
+      wc2026Title: string
+      wc2026Description: string
+      devopsPracticeTitle: string
+      devopsPracticeDescription: string
+    }
   }
   experience: {
     title: string
