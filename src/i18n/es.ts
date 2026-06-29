@@ -176,6 +176,11 @@ export const es = {
   certifications: {
     title: 'Certificaciones',
     description: 'Credenciales cloud y de ingeniería que respaldan el trabajo.',
+    labels: {
+      expires: 'Vence',
+      issued: 'Emitido',
+      badgeAlt: 'insignia',
+    },
   },
   contact: {
     title: 'Contacto',

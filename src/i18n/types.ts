@@ -154,6 +154,11 @@ export interface Translations {
   certifications: {
     title: string
     description: string
+    labels: {
+      expires: string
+      issued: string
+      badgeAlt: string
+    }
   }
   contact: {
     title: string
