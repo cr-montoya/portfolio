@@ -3,13 +3,13 @@ import type { Translations } from './types'
 export const es = {
   nav: {
     brand: '~/cristian',
-    home: 'Inicio',
-    about: 'Sobre mí',
-    skills: 'Habilidades',
-    projects: 'Proyectos',
-    experience: 'Experiencia',
-    certifications: 'Certs',
-    contact: 'Contacto',
+    about: 'sobre mí',
+    projects: 'proyectos',
+    experience: 'experiencia',
+    judo: 'judo',
+    certifications: 'certs',
+    writing: 'notas',
+    contact: 'contacto',
     languageToggle: 'Seleccionar idioma',
   },
   hero: {
@@ -17,12 +17,12 @@ export const es = {
     title: 'Cristian Montoya',
     subtitle: 'Ingeniero Senior AWS DevOps',
     description:
-      'Diseño, automatizo y aseguro entornos cloud productivos en AWS — Terraform, CI/CD y DevSecOps por más de 4 años.',
+      'Diseño, automatizo y aseguro nube en producción sobre AWS — Terraform, CI/CD y DevSecOps desde hace 4+ años.',
     terminal: {
       whoamiCommand: 'whoami',
-      whoamiResult: 'cristian-montoya — ingeniero devops senior',
-      planCommand: 'terraform plan',
-      planResult: '4+ años de experiencia · listo para producción',
+      whoamiResult: 'cristian-montoya — ingeniero devops & seguridad senior',
+      planCommand: 'cat enfoque.txt',
+      planResult: 'aws · terraform · ci/cd · devsecops',
     },
     actions: {
       projects: 'ver proyectos',
@@ -36,24 +36,25 @@ export const es = {
     scrollIndicator: 'Ir a la sección sobre mí',
   },
   about: {
-    title: 'Sobre mí',
+    title: 'sobre mí',
     eyebrow: 'cloud productivo, construido con intención',
+    kicker: 'nube en producción, construida con intención',
     body: [
-      'Soy Ingeniero Senior AWS DevOps en Medellín, Colombia, con más de 4 años diseñando, automatizando, asegurando y operando entornos cloud productivos y resilientes.',
-      'Mi trabajo se enfoca en infraestructura como código, CI/CD, cargas contenerizadas, redes cloud, observabilidad, backups y prácticas de recuperación ante desastres.',
-      'He liderado iniciativas de infraestructura AWS desde arquitectura e implementación con Terraform hasta automatización de entrega, apoyando cumplimiento SOC2/HIPAA y controles de seguridad más sólidos.',
+      'Soy Ingeniero Senior AWS DevOps en Medellín, Colombia, con 4+ años diseñando, automatizando, asegurando y operando entornos cloud productivos y resilientes.',
+      'Mi trabajo se centra en infraestructura como código, CI/CD, cargas contenerizadas, redes cloud, observabilidad, backup y recuperación ante desastres.',
+      'He liderado iniciativas AWS desde arquitectura e implementación con Terraform hasta automatización de entrega, apoyando cumplimiento SOC2/HIPAA y controles de seguridad más sólidos.',
     ],
     focusTitle: 'áreas de enfoque',
     focus: {
-      aws: 'Infraestructura AWS',
-      iac: 'Terraform e IaC',
+      aws: 'Infraestructura cloud AWS',
+      iac: 'Terraform & IaC',
       cicd: 'Automatización CI/CD',
-      security: 'Seguridad y compliance',
+      security: 'Seguridad & compliance',
       observability: 'Observabilidad',
     },
     current: {
       label: 'actualmente',
-      value: 'AWS DevOps Engineer Professional certificado',
+      value: 'AWS DevOps Engineer · certificado Professional',
     },
     visual: {
       roleLabel: 'rol',
@@ -107,9 +108,9 @@ export const es = {
     },
   },
   projects: {
-    title: 'Proyectos',
+    title: 'proyectos',
     description:
-      'Trabajo seleccionado en infraestructura cloud, sistemas de entrega y herramientas para desarrolladores.',
+      'Trabajo seleccionado en infraestructura cloud, sistemas de entrega y herramientas para developers.',
     labels: {
       featured: 'destacado',
       repository: 'repositorio',
@@ -119,91 +120,145 @@ export const es = {
     items: {
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
-        'Automatización de seguridad y guardrails para cuentas AWS, enfocada en remediación IAM, controles base y hardening operativo.',
+        'Automatización y guardrails de seguridad para cuentas AWS — remediación IAM, controles base y hardening operativo.',
       wc2026Title: 'Simulador de Predicciones Mundial 2026',
       wc2026Description:
-        'Simulador analítico en TypeScript para predicciones de torneo usando modelo Poisson, Monte Carlo e insights asistidos por IA.',
+        'Simulador analítico en TypeScript con modelado Poisson, simulación Monte Carlo e insights asistidos por IA.',
       devopsPracticeTitle: 'AWS DevOps Pro Practice',
       devopsPracticeDescription:
-        'Repositorio de práctica para patrones AWS DevOps Professional con Python, SAM/CDK, flujos CI/CD y ejemplos de observabilidad.',
+        'Patrones de referencia para AWS DevOps Professional — Python, SAM/CDK, workflows CI/CD y observabilidad.',
     },
   },
   experience: {
-    title: 'Experiencia',
+    title: 'experiencia',
     description:
-      'Una línea de tiempo enfocada en operación cloud productiva, automatización DevOps, controles de seguridad y mejoras de entrega.',
+      'Una línea de tiempo enfocada en ownership cloud en producción, automatización, seguridad y entrega.',
     labels: {
       current: 'actual',
       present: 'presente',
       stack: 'stack',
     },
-    highlights: {
-      soc2: 'SOC2 Type I/II',
-      hipaa: 'Infra HIPAA compliant',
-      delivery: 'Deployments 80% más rápidos',
-      ai: 'Flujos con AI',
-    },
+    stats: [
+      { v: 'SOC2', k: 'Type I / II' },
+      { v: 'HIPAA', k: 'infra conforme' },
+      { v: '80%', k: 'deploys más rápidos' },
+      { v: 'IA', k: 'workflows habilitados' },
+    ],
     roles: {
-      techLead: 'DevOps and Security Tech Lead',
-      devopsSecurityEngineer: 'DevOps and Security Engineer',
+      techLead: 'DevOps & Security Tech Lead',
+      devopsSecurityEngineer: 'DevOps & Security Engineer',
     },
     accomplishments: {
       multiCloudLeadership: 'Lidero la operación y evolución de entornos multi-cloud.',
       awsOwnership:
         'Soy responsable de iniciativas AWS end-to-end, desde arquitectura e implementación con Terraform hasta integración CI/CD.',
       complianceSecurity:
-        'Apoyé la obtención de SOC2 Type I el año pasado y SOC2 Type II este año, manteniendo infraestructura productiva HIPAA compliant.',
+        'Impulsé SOC2 Type I y luego Type II, manteniendo la infraestructura de producción HIPAA compliant.',
       cicdOptimization:
-        'Diseñé sistemas CI/CD con despliegues blue-green en producción, reduciendo riesgo de release y manteniendo plataformas online.',
+        'Diseñé CI/CD con despliegues blue-green en producción, reduciendo riesgo de release y manteniendo plataformas online.',
       devopsPracticeBuilt:
-        'Construí la práctica DevOps casi desde cero: pipelines, estándares, operación productiva y ownership de infraestructura en la compañía.',
+        'Construí la práctica DevOps casi desde cero: pipelines, estándares, operación en producción y ownership de infraestructura.',
       teamLeadership:
-        'Lideré y formé ingenieros desde bases entry-level hasta perfiles capaces en infraestructura y delivery.',
+        'Lideré y formé ingenieros desde fundamentos hasta perfiles capaces en infraestructura y delivery.',
       productionOwnership:
-        'Lideré iniciativas end to end, desde levantamiento de requerimientos y arquitectura hasta implementación, despliegue y operación en producción.',
+        'Lideré iniciativas end to end — desde levantamiento de requerimientos y arquitectura hasta despliegue y operación.',
       aiWorkflowAdoption:
-        'Integré flujos de ingeniería asistidos por AI en el día a día, incluyendo ejecución guiada por harness y spec-driven development.',
+        'Integré ingeniería asistida por IA en la entrega diaria: ejecución harness-driven y spec-driven development.',
       automationTransformation:
-        'Convertí delivery semi-manual en un ecosistema DevOps automatizado, construyendo pipelines para productos y entornos.',
+        'Convertí delivery semi-manual en un ecosistema DevOps automatizado para productos y entornos.',
       selfHostedMigration:
-        'Migré flujos de delivery y control de código hacia plataformas self-hosted como GitLab y tooling interno.',
+        'Migré flujos de delivery y control de código hacia plataformas self-hosted como GitLab.',
       terraformConsolidation:
-        'Consolidé infraestructura fragmentada en repositorios Terraform reutilizables y ayudé a establecer bases cloud seguras.',
+        'Consolidé infraestructura fragmentada en repositorios Terraform reutilizables y bases cloud seguras.',
       deploymentReduction:
-        'Construí bases iniciales de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo tiempos de despliegue en más de 80%.',
+        'Construí bases de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo tiempos de despliegue en 80%.',
     },
   },
   certifications: {
-    title: 'Certificaciones',
+    title: 'certificaciones',
     description: 'Credenciales cloud y de ingeniería que respaldan el trabajo.',
     labels: {
       expires: 'Vence',
       issued: 'Emitido',
       badgeAlt: 'insignia',
+      active: 'activo',
+      retired: 'retirado',
     },
   },
+  judo: {
+    title: 'judo',
+    kicker: 'la disciplina detrás de la ingeniería',
+    caption: '// la trayectoria de una proyección — y de un deploy',
+    intro:
+      'Nueve años en el tatami — judo y jiu-jitsu brasileño. Cinturón azul en judo, múltiple medallista nacional por Antioquia y competidor a nivel universitario.',
+    intro2:
+      'No es una página deportiva — es de donde vienen mis instintos de ingeniería: calma bajo presión, timing preciso y mejora incansable.',
+    beltsTitle: 'cinturones',
+    beltJudo: 'Cinturón azul',
+    beltBjj: 'Cinturón blanco',
+    principlesTitle: 'principios que llevo a producción',
+    principles: [
+      {
+        jp: 'Kuzushi',
+        kanji: '崩し',
+        term: 'romper el equilibrio',
+        desc: 'Encontrar los puntos de desequilibrio de un sistema antes de que fallen.',
+      },
+      {
+        jp: "Seiryoku Zen'yō",
+        kanji: '精力善用',
+        term: 'máxima eficiencia',
+        desc: 'Automatizar para máximo efecto con mínimo esfuerzo.',
+      },
+      {
+        jp: 'Randori',
+        kanji: '乱取り',
+        term: 'práctica libre',
+        desc: 'Mantener la calma y adaptarse bajo presión en producción.',
+      },
+      {
+        jp: 'Ukemi',
+        kanji: '受け身',
+        term: 'el arte de caer',
+        desc: 'Diseñar para fallar seguro — resiliencia, backups, recuperación.',
+      },
+      {
+        jp: 'Kaizen',
+        kanji: '改善',
+        term: 'mejora continua',
+        desc: 'Iterar sin descanso — las mejoras pequeñas se acumulan.',
+      },
+    ],
+    stats: [
+      { v: '9a', k: 'en el tatami' },
+      { v: 'Múltiple', k: 'medallas nacionales' },
+      { v: 'Antioquia', k: 'selección' },
+      { v: 'Uni', k: 'competidor' },
+    ],
+  },
+  writing: {
+    title: 'notas',
+    description: 'Notas sobre cloud, automatización y la disciplina detrás — muy pronto.',
+    articles: [
+      { date: 'pronto', title: 'Construir una práctica DevOps desde cero', tag: 'devops' },
+      { date: 'pronto', title: 'SOC2 Type II sin frenar la entrega', tag: 'seguridad' },
+      {
+        date: 'pronto',
+        title: 'Kuzushi para sistemas: encontrar la falla antes de que te encuentre',
+        tag: 'fiabilidad',
+      },
+    ],
+  },
   contact: {
-    title: 'Contacto',
-    description:
-      'Abierto a conversaciones sobre DevOps senior, platform engineering, seguridad cloud y automatización de infraestructura.',
-    cta: 'Iniciar conversación',
-    eyebrow: 'listo para construir cloud productivo',
-    availability: 'Basado en Medellín, Colombia · disponible para colaboración remota',
-    labels: {
-      open: 'abrir',
-    },
+    title: 'contacto',
+    heading: 'Construyamos algo sólido.',
+    body: 'Abierto a roles senior de DevOps / Cloud / Platform y a problemas interesantes de infraestructura.',
+    footer: '© 2026 cristian montoya · construido con intención',
     links: {
-      email: 'Email',
-      linkedin: 'LinkedIn',
-      github: 'GitHub',
+      email: 'cristian.montoya@example.com',
+      github: 'github.com/cr-montoya',
+      linkedin: 'linkedin.com/in/cr-montoya',
     },
-    linkDescriptions: {
-      email: 'Envía un mensaje directo a Cristian.',
-      linkedin: 'Conecta desde el perfil profesional.',
-      github: 'Revisa repositorios públicos y trabajo técnico.',
-    },
-    footer:
-      '© 2026 Cristian Montoya. Construido con React, TypeScript, Tailwind y Cloudflare Pages.',
   },
   common: {
     currentLanguage: 'Idioma actual',

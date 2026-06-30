@@ -8,7 +8,7 @@ export function Skills() {
   return (
     <SectionWrapper id="skills">
       <div className="mb-10 max-w-2xl">
-        <SectionTitle label={t.skills.title} />
+        <SectionTitle label={t.skills.title} number="—" />
         <p className="mt-4 text-sm leading-7 text-text-muted sm:text-base">
           {t.skills.description}
         </p>

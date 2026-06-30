@@ -1,13 +1,14 @@
 export interface SectionTitleProps {
-  prefix?: string
+  number: string
   label: string
-  id?: string
 }
 
-export function SectionTitle({ prefix = '>', label, id }: SectionTitleProps) {
+export function SectionTitle({ number, label }: SectionTitleProps) {
   return (
-    <h2 className="font-mono text-2xl text-text-primary sm:text-3xl" id={id}>
-      <span className="text-accent-green">{prefix}</span> {label}
-    </h2>
+    <div className="mb-4 font-mono text-[13px] tracking-[0.16em]">
+      <span className="text-accent-green">{number}</span>
+      <span className="text-[#3a423f]"> / </span>
+      <span className="text-text-subtle">{label}</span>
+    </div>
   )
 }
