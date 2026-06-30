@@ -18,17 +18,13 @@ export function Experience() {
       (entries) => {
         setVisibleEntries((currentEntries) => {
           const nextEntries = new Set(currentEntries)
-
           for (const entry of entries) {
-            if (entry.isIntersecting) {
-              nextEntries.add(entry.target.id)
-            }
+            if (entry.isIntersecting) nextEntries.add(entry.target.id)
           }
-
           return nextEntries
         })
       },
-      { threshold: 0.2 },
+      { threshold: 0.15 },
     )
 
     const elements = Array.from(entryRefs.current.values())
@@ -38,22 +34,23 @@ export function Experience() {
   }, [])
 
   const formatPeriod = (start: string, end: string) =>
-    end === 'present' ? `${start} - ${t.experience.labels.present}` : `${start} - ${end}`
+    end === 'present' ? `${start} · ${t.experience.labels.present}` : `${start} · ${end}`
 
   return (
     <SectionWrapper id="experience">
-      <div className="mb-10 max-w-2xl">
-        <SectionTitle label={t.experience.title} />
-        <p className="mt-4 text-sm leading-7 text-text-muted sm:text-base">
-          {t.experience.description}
-        </p>
-      </div>
+      <SectionTitle label={t.experience.title} number="03" />
 
-      <div className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {Object.values(t.experience.highlights).map((highlight) => (
-          <Card className="p-4" key={highlight}>
-            <p className="font-mono text-sm text-accent-green">{highlight}</p>
-          </Card>
+      <p className="mt-2 mb-8 text-[15px] leading-7 text-text-muted">{t.experience.description}</p>
+
+      <div className="mb-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {t.experience.stats.map((stat) => (
+          <div
+            className="rounded-xl border border-border bg-surface px-4 py-5 text-center"
+            key={stat.k}
+          >
+            <p className="font-mono text-xl font-bold text-accent-green">{stat.v}</p>
+            <p className="mt-1 font-mono text-[11px] text-text-subtle">{stat.k}</p>
+          </div>
         ))}
       </div>
 
@@ -69,31 +66,27 @@ export function Experience() {
               id={entry.id}
               key={entry.id}
               ref={(node) => {
-                if (node) {
-                  entryRefs.current.set(entry.id, node)
-                } else {
-                  entryRefs.current.delete(entry.id)
-                }
+                if (node) entryRefs.current.set(entry.id, node)
+                else entryRefs.current.delete(entry.id)
               }}
             >
               <span
                 className={`absolute -left-[1.85rem] top-6 size-3 rounded-full border ${
                   entry.current
-                    ? 'border-accent-green bg-accent-green shadow-glow-green'
-                    : 'border-border-strong bg-background'
+                    ? 'border-accent-green bg-accent-green'
+                    : 'border-border bg-background'
                 } sm:-left-[2.35rem]`}
               />
 
-              <Card className={`p-6 sm:p-8 ${entry.current ? 'border-accent-green/50' : ''}`}>
+              <Card className={entry.current ? 'border-accent-green/40' : ''}>
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-mono text-xl text-text-primary">
+                    <h3 className="font-sans text-lg font-semibold text-text-primary">
                       {t.experience.roles[entry.roleKey]}
                     </h3>
-                    <p className="mt-2 font-mono text-sm text-accent-cyan">{entry.company}</p>
+                    <p className="mt-1 font-mono text-sm text-accent-green">{entry.company}</p>
                   </div>
-
-                  <div className="flex flex-wrap justify-start gap-2 sm:justify-end">
+                  <div className="flex flex-wrap gap-2">
                     {entry.current ? (
                       <Badge variant="accent">{t.experience.labels.current}</Badge>
                     ) : null}
@@ -103,20 +96,23 @@ export function Experience() {
                   </div>
                 </div>
 
-                <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                <ul className="mt-5 space-y-2">
                   {entry.accomplishmentsKeys.map((key) => (
-                    <p className="text-sm leading-7 text-text-muted" key={key}>
+                    <li className="flex gap-2 text-[14px] leading-6 text-text-muted" key={key}>
+                      <span aria-hidden="true" className="mt-[2px] shrink-0 text-accent-green">
+                        ›
+                      </span>
                       {t.experience.accomplishments[key]}
-                    </p>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
-                <div className="mt-7 border-t border-border pt-5">
-                  <p className="mb-3 font-mono text-xs text-text-muted">
+                <div className="mt-6 border-t border-border pt-4">
+                  <p className="mb-2 font-mono text-xs text-text-dim">
                     {t.experience.labels.stack}
                   </p>
-                  <p className="font-mono text-sm leading-7 text-text-primary">
-                    {entry.technologies.join(' / ')}
+                  <p className="font-mono text-[13px] leading-6 text-text-muted">
+                    {entry.technologies.join(' · ')}
                   </p>
                 </div>
               </Card>

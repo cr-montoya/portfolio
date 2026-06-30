@@ -2,42 +2,57 @@
 
 @theme {
   /* Colors */
-  --color-background: #0a0e1a;
-  --color-surface: #111827;
-  --color-surface-hover: #1a2233;
-  --color-surface-muted: #0d1322;
-  --color-accent-green: #00ff9d;
-  --color-accent-cyan: #00d4ff;
-  --color-text-primary: #f0f6fc;
-  --color-text-muted: #8b949e;
-  --color-border: #21262d;
-  --color-border-strong: #30394b;
-  --color-terminal-green: #00ff9d;
-  --color-terminal-cyan: #00d4ff;
+  --color-background: #000000;
+  --color-surface: #08090b;
+  --color-accent-green: #34e29a;
+  --color-accent-green-bright: #4dffa6;
+  --color-text-primary: #f2f4f1;
+  --color-text-secondary: #e7e9e6;
+  --color-text-muted: #9aa39f;
+  --color-text-subtle: #7f8a85;
+  --color-text-dim: #6b7672;
+  --color-text-faint: #5a635f;
+  --color-border: rgba(255 255 255 / 0.08);
+  --color-border-section: rgba(255 255 255 / 0.06);
 
   /* Shadows */
-  --shadow-glow-green: 0 0 24px rgb(0 255 157 / 0.18);
-  --shadow-glow-cyan: 0 0 24px rgb(0 212 255 / 0.14);
+  --shadow-glow-green: 0 0 12px rgba(52 226 154 / 0.45);
 
   /* Fonts */
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-
-  /* Spacing extras */
-  --spacing-section: 5rem;
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
 
   /* Motion */
-  --animate-cursor-blink: cursor-blink 1s step-end infinite;
+  --animate-cursor-blink: cursor-blink 1.05s step-end infinite;
+  --animate-draw-arc: draw-arc 2.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  --animate-pulse-ring: pulse-ring 2.8s ease-out infinite;
 }
 
 @layer base {
   @keyframes cursor-blink {
     0%,
-    45% {
+    49% {
       opacity: 1;
     }
-    46%,
+    50%,
     100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes draw-arc {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.5);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(2.2);
       opacity: 0;
     }
   }
@@ -46,14 +61,23 @@
     scroll-behavior: smooth;
   }
 
+  ::selection {
+    background: #34e29a;
+    color: #04130c;
+  }
+
   :focus-visible {
-    outline: 2px solid var(--color-accent-cyan);
+    outline: 2px solid var(--color-accent-green);
     outline-offset: 4px;
   }
 
   body {
     background-color: var(--color-background);
-    color: var(--color-text-primary);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+    background-size: 46px 46px;
+    color: var(--color-text-secondary);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }

@@ -7,33 +7,34 @@ export function About() {
 
   return (
     <SectionWrapper id="about">
-      <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-        <div>
-          <SectionTitle label={t.about.title} />
-          <p className="mt-4 font-mono text-sm text-accent-cyan">{t.about.eyebrow}</p>
+      <SectionTitle label={t.about.title} number="01" />
 
-          <div className="mt-6 space-y-4 text-sm leading-7 text-text-muted sm:text-base">
+      <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+        <div>
+          <p className="mb-6 font-mono text-sm text-accent-green">{t.about.kicker}</p>
+
+          <div className="space-y-4 text-[15px] leading-7 text-text-muted">
             {t.about.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
 
           <div className="mt-8">
-            <p className="mb-3 font-mono text-sm text-text-primary">{t.about.focusTitle}</p>
-            <div className="flex flex-wrap gap-3">
+            <p className="mb-3 font-mono text-sm text-text-subtle">{t.about.focusTitle}</p>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
               {aboutFocusAreas.map((focusArea) => (
-                <Badge key={focusArea.id} variant="outline">
+                <span className="font-mono text-[13px] text-text-muted" key={focusArea.id}>
                   {t.about.focus[focusArea.labelKey]}
-                </Badge>
+                </span>
               ))}
             </div>
           </div>
         </div>
 
-        <Card className="bg-surface/80">
+        <Card>
           <div className="mb-6 flex items-center justify-between gap-4">
             <Badge variant="accent">{t.about.current.label}</Badge>
-            <span className="font-mono text-xs text-text-muted">{t.nav.brand}</span>
+            <span className="font-mono text-xs text-text-dim">{t.nav.brand}</span>
           </div>
 
           <div className="space-y-4">
@@ -45,7 +46,7 @@ export function About() {
             <p className="font-mono text-sm text-text-primary">{t.about.visual.stackValue}</p>
           </div>
 
-          <div className="mt-8 rounded-md border border-accent-green/30 bg-accent-green/10 p-4">
+          <div className="mt-8 rounded-lg border border-accent-green/25 bg-accent-green/8 p-4">
             <p className="font-mono text-sm font-semibold text-accent-green">
               {t.about.current.value}
             </p>

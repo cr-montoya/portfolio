@@ -6,8 +6,9 @@ import { Certifications } from '@/sections/Certifications'
 import { Contact } from '@/sections/Contact'
 import { Experience } from '@/sections/Experience'
 import { Hero } from '@/sections/Hero'
+import { Judo } from '@/sections/Judo'
 import { Projects } from '@/sections/Projects'
-import { Skills } from '@/sections/Skills'
+import { Writing } from '@/sections/Writing'
 import type { Locale } from '@/types/locale'
 
 export default function App() {
@@ -18,10 +19,11 @@ export default function App() {
 
   const navLinks = [
     { href: '#about', label: t.nav.about },
-    { href: '#skills', label: t.nav.skills },
     { href: '#projects', label: t.nav.projects },
     { href: '#experience', label: t.nav.experience },
+    { href: '#judo', label: t.nav.judo },
     { href: '#certifications', label: t.nav.certifications },
+    { href: '#writing', label: t.nav.writing },
     { href: '#contact', label: t.nav.contact },
   ] as const
 
@@ -43,10 +45,11 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Skills />
         <Projects />
         <Experience />
+        <Judo />
         <Certifications />
+        <Writing />
         <Contact />
       </main>
     </div>

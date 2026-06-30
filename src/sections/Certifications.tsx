@@ -5,11 +5,15 @@ import { Card, SectionTitle, SectionWrapper } from '@/components/ui'
 export function Certifications() {
   const { t } = useTranslation()
 
+  const isActive = (cert: (typeof certifications)[number]) => {
+    if (!cert.expiresDate) return true
+    return new Date(cert.expiresDate) > new Date()
+  }
+
   const formatStatus = (cert: (typeof certifications)[number]) => {
     const date = new Date(cert.expiresDate ?? cert.issuedDate).toLocaleDateString(undefined, {
       year: 'numeric',
       month: 'short',
-      day: 'numeric',
     })
     const label = cert.expiresDate
       ? t.certifications.labels.expires
@@ -19,29 +23,41 @@ export function Certifications() {
 
   return (
     <SectionWrapper id="certifications">
-      <div className="mb-10 max-w-2xl">
-        <SectionTitle label={t.certifications.title} />
-        <p className="mt-4 text-sm leading-7 text-text-muted sm:text-base">
-          {t.certifications.description}
-        </p>
-      </div>
+      <SectionTitle label={t.certifications.title} number="05" />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <p className="mt-2 mb-10 text-[15px] leading-7 text-text-muted">
+        {t.certifications.description}
+      </p>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {certifications.map((cert) => (
-          <a href={cert.verifyUrl} key={cert.id} rel="noopener noreferrer" target="_blank">
+          <a
+            className="group block"
+            href={cert.verifyUrl}
+            key={cert.id}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <Card className="flex h-full flex-col items-center gap-4 text-center">
-              <img
-                alt={`${cert.name} ${t.certifications.labels.badgeAlt}`}
-                className="size-28 object-contain"
-                height={112}
-                loading="lazy"
-                src={cert.badgeImageUrl}
-                width={112}
-              />
-              <div>
-                <h3 className="font-mono text-base text-text-primary">{cert.name}</h3>
-                <p className="mt-2 text-xs text-text-muted">{cert.issuer}</p>
-                <p className="mt-3 font-mono text-xs text-accent-cyan">{formatStatus(cert)}</p>
+              <div className="relative">
+                <img
+                  alt={`${cert.name} ${t.certifications.labels.badgeAlt}`}
+                  className="size-24 object-contain transition-transform duration-300 group-hover:scale-105"
+                  height={96}
+                  loading="lazy"
+                  src={cert.badgeImageUrl}
+                  width={96}
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <h3 className="font-mono text-[13px] leading-5 text-text-primary">{cert.name}</h3>
+                <p className="text-xs text-text-muted">{cert.issuer}</p>
+                <div className="mt-auto flex items-center justify-center gap-2">
+                  <span
+                    className={`inline-block size-1.5 rounded-full ${isActive(cert) ? 'bg-accent-green' : 'bg-text-dim'}`}
+                  />
+                  <p className="font-mono text-[11px] text-text-subtle">{formatStatus(cert)}</p>
+                </div>
               </div>
             </Card>
           </a>

@@ -3,12 +3,12 @@ import type { Locale } from '@/types/locale'
 export interface Translations {
   nav: {
     brand: string
-    home: string
     about: string
-    skills: string
     projects: string
     experience: string
+    judo: string
     certifications: string
+    writing: string
     contact: string
     languageToggle: string
   }
@@ -20,8 +20,10 @@ export interface Translations {
     terminal: {
       whoamiCommand: string
       whoamiResult: string
-      planCommand: string
-      planResult: string
+      focusCommand: string
+      focusResult: string
+      uptimeCommand: string
+      uptimeResult: string
     }
     actions: {
       projects: string
@@ -37,6 +39,7 @@ export interface Translations {
   about: {
     title: string
     eyebrow: string
+    kicker: string
     body: string[]
     focusTitle: string
     focus: {
@@ -126,12 +129,7 @@ export interface Translations {
       present: string
       stack: string
     }
-    highlights: {
-      soc2: string
-      hipaa: string
-      delivery: string
-      ai: string
-    }
+    stats: Array<{ v: string; k: string }>
     roles: {
       techLead: string
       devopsSecurityEngineer: string
@@ -158,28 +156,47 @@ export interface Translations {
       expires: string
       issued: string
       badgeAlt: string
+      active: string
+      retired: string
     }
+  }
+  judo: {
+    title: string
+    kicker: string
+    caption: string
+    intro: string
+    intro2: string
+    beltsTitle: string
+    beltJudo: string
+    beltBjj: string
+    principlesTitle: string
+    principles: Array<{
+      jp: string
+      kanji: string
+      term: string
+      desc: string
+    }>
+    stats: Array<{ v: string; k: string }>
+  }
+  writing: {
+    title: string
+    description: string
+    articles: Array<{
+      date: string
+      title: string
+      tag: string
+    }>
   }
   contact: {
     title: string
-    description: string
-    cta: string
-    eyebrow: string
-    availability: string
-    labels: {
-      open: string
-    }
+    heading: string
+    body: string
+    footer: string
     links: {
       email: string
-      linkedin: string
       github: string
-    }
-    linkDescriptions: {
-      email: string
       linkedin: string
-      github: string
     }
-    footer: string
   }
   common: {
     currentLanguage: string
