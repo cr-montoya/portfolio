@@ -21,8 +21,10 @@ export const en = {
     terminal: {
       whoamiCommand: 'whoami',
       whoamiResult: 'cristian-montoya — senior devops & security engineer',
-      planCommand: 'cat focus.txt',
-      planResult: 'aws · terraform · ci/cd · devsecops',
+      focusCommand: 'cat focus.txt',
+      focusResult: 'aws · terraform · ci/cd · devsecops',
+      uptimeCommand: 'uptime',
+      uptimeResult: '4+ years · production-ready',
     },
     actions: {
       projects: 'view projects',

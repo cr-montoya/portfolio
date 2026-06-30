@@ -1,10 +1,8 @@
 import { useTranslation } from '@/i18n'
-import { Card, SectionTitle, SectionWrapper } from '@/components/ui'
+import { SectionTitle, SectionWrapper } from '@/components/ui'
 
-const ARC_R = 88
-const ARC_CX = 100
-const ARC_CY = 100
-const ARC_LEN = Math.PI * ARC_R
+const ARC_PATH = 'M 120 250 Q 470 -25 800 250'
+const ARC_LEN = 1150
 
 export function Judo() {
   const { t } = useTranslation()
@@ -13,105 +11,175 @@ export function Judo() {
     <SectionWrapper id="judo">
       <SectionTitle label={t.judo.title} number="04" />
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
-        {/* SVG arc + stats column */}
-        <div>
-          <div className="flex flex-col items-center gap-6">
-            <div className="relative" style={{ width: 200, height: 200 }}>
-              {/* pulse ring */}
-              <svg
-                aria-hidden="true"
-                className="absolute inset-0"
-                fill="none"
-                height={200}
-                viewBox="0 0 200 200"
-                width={200}
-              >
-                <circle
-                  className="animate-pulse-ring"
-                  cx={ARC_CX}
-                  cy={ARC_CY}
-                  fill="none"
-                  r={ARC_R + 12}
-                  stroke="rgba(52,226,154,0.12)"
-                  strokeWidth={1}
-                />
-              </svg>
-              {/* arc */}
-              <svg aria-hidden="true" fill="none" height={200} viewBox="0 0 200 200" width={200}>
-                {/* track */}
-                <circle
-                  cx={ARC_CX}
-                  cy={ARC_CY}
-                  r={ARC_R}
-                  stroke="rgba(255,255,255,0.06)"
-                  strokeWidth={2}
-                />
-                {/* animated arc */}
-                <circle
-                  className="animate-draw-arc"
-                  cx={ARC_CX}
-                  cy={ARC_CY}
-                  r={ARC_R}
-                  stroke="#34e29a"
-                  strokeDasharray={`${ARC_LEN * 0.75} ${ARC_LEN}`}
-                  strokeDashoffset={ARC_LEN * 0.75}
-                  strokeLinecap="round"
-                  strokeWidth={2}
-                  style={{ transformOrigin: '100px 100px', transform: 'rotate(-90deg)' }}
-                />
-              </svg>
-              {/* center text */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-mono text-[13px] text-text-subtle">{t.judo.beltsTitle}</span>
-                <span className="mt-1 font-sans text-base font-semibold text-text-primary">
-                  {t.judo.beltJudo}
-                </span>
-                <span className="font-mono text-xs text-text-dim">{t.judo.beltBjj}</span>
-              </div>
-            </div>
+      <h2 className="mb-6 font-mono text-[clamp(1.4rem,4vw,2.1rem)] font-semibold leading-tight tracking-[-0.01em] text-text-primary">
+        {t.judo.kicker}
+      </h2>
 
-            <p className="font-mono text-[11px] tracking-[0.14em] text-text-dim">
-              {t.judo.caption}
-            </p>
+      {/* Arc SVG panel */}
+      <div className="relative mb-7 overflow-hidden rounded-[14px] border border-border bg-[#060708]">
+        <svg aria-hidden="true" className="block w-full" fill="none" viewBox="0 0 920 300">
+          {/* horizontal grid lines */}
+          <g stroke="rgba(255,255,255,.05)" strokeWidth={1}>
+            <line x1={0} x2={920} y1={255} y2={255} />
+            <line x1={0} x2={920} y1={200} y2={200} />
+            <line x1={0} x2={920} y1={145} y2={145} />
+          </g>
+
+          {/* arc */}
+          <path
+            d={ARC_PATH}
+            stroke="rgba(52,226,154,.32)"
+            strokeDasharray={ARC_LEN}
+            strokeDashoffset={ARC_LEN}
+            strokeWidth={2}
+            style={{ animation: 'draw-arc 2.8s cubic-bezier(.4,0,.2,1) forwards' }}
+          />
+
+          {/* start — kuzushi */}
+          <circle cx={120} cy={250} fill="#34e29a" r={6} />
+          <text
+            fill="#5a635f"
+            fontFamily="'JetBrains Mono',monospace"
+            fontSize={12}
+            textAnchor="middle"
+            x={120}
+            y={278}
+          >
+            kuzushi
+          </text>
+
+          {/* apex — seiryoku zen'yō */}
+          <circle cx={470} cy={58} fill="#dff3e9" r={4} />
+          <text
+            fill="#7f8a85"
+            fontFamily="'JetBrains Mono',monospace"
+            fontSize={11}
+            textAnchor="middle"
+            x={470}
+            y={44}
+          >
+            {'seiryoku zen’yō'}
+          </text>
+
+          {/* end — ukemi (double pulse ring) */}
+          <circle
+            cx={800}
+            cy={250}
+            fill="none"
+            r={9}
+            stroke="#34e29a"
+            strokeWidth={2}
+            style={{
+              transformBox: 'fill-box',
+              transformOrigin: 'center',
+              animation: 'pulse-ring 2.8s ease-out infinite',
+            }}
+          />
+          <circle
+            cx={800}
+            cy={250}
+            fill="none"
+            r={9}
+            stroke="#34e29a"
+            strokeWidth={2}
+            style={{
+              transformBox: 'fill-box',
+              transformOrigin: 'center',
+              animation: 'pulse-ring 2.8s ease-out infinite',
+              animationDelay: '1.4s',
+            }}
+          />
+          <text
+            fill="#5a635f"
+            fontFamily="'JetBrains Mono',monospace"
+            fontSize={12}
+            textAnchor="middle"
+            x={800}
+            y={278}
+          >
+            ukemi
+          </text>
+
+          {/* travelling dot along arc */}
+          <circle
+            fill="#4dffa6"
+            r={7}
+            style={{ filter: 'drop-shadow(0 0 8px rgba(77,255,166,.8))' }}
+          >
+            <animateMotion dur="2.8s" path={ARC_PATH} repeatCount="indefinite" />
+          </circle>
+        </svg>
+
+        <div
+          aria-hidden="true"
+          className="absolute left-5 top-4 font-mono text-[11.5px] tracking-[0.1em] text-text-faint"
+        >
+          {t.judo.caption}
+        </div>
+      </div>
+
+      {/* Two-column layout */}
+      <div className="grid gap-9 lg:grid-cols-2 lg:items-start">
+        {/* Left: intro paragraphs + belts + stats */}
+        <div className="flex flex-col gap-3.5 text-[16.5px] leading-7 text-text-muted">
+          <p>{t.judo.intro}</p>
+          <p>{t.judo.intro2}</p>
+
+          <div className="mt-2 flex flex-col gap-2.5">
+            <div className="font-mono text-[12px] uppercase tracking-[0.12em] text-text-faint">
+              {t.judo.beltsTitle}
+            </div>
+            <div className="flex items-center gap-3">
+              <div
+                className="h-[15px] w-[118px] shrink-0 rounded-[3px]"
+                style={{
+                  background: '#3f7ad6',
+                  boxShadow: 'inset 0 0 0 1px rgba(255,255,255,.12)',
+                }}
+              />
+              <span className="font-mono text-[13px] text-[#cfd4d1]">Judo · {t.judo.beltJudo}</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div
+                className="h-[15px] w-[118px] shrink-0 rounded-[3px]"
+                style={{ background: '#e9ecee', boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.25)' }}
+              />
+              <span className="font-mono text-[13px] text-[#cfd4d1]">BJJ · {t.judo.beltBjj}</span>
+            </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-3">
+          <div className="mt-2.5 grid grid-cols-2 gap-2.5">
             {t.judo.stats.map((stat) => (
-              <div
-                className="rounded-xl border border-border bg-surface px-4 py-4 text-center"
-                key={stat.k}
-              >
-                <p className="font-mono text-lg font-bold text-accent-green">{stat.v}</p>
-                <p className="mt-1 font-mono text-[11px] text-text-subtle">{stat.k}</p>
+              <div className="rounded-[9px] border border-border px-3.5 py-3" key={stat.k}>
+                <div className="font-mono text-[15px] font-bold text-accent-green">{stat.v}</div>
+                <div className="mt-0.5 font-mono text-[11px] text-text-subtle">{stat.k}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* text column */}
+        {/* Right: principles */}
         <div>
-          <p className="mb-2 font-mono text-sm text-accent-green">{t.judo.kicker}</p>
-          <p className="mb-4 text-[15px] leading-7 text-text-muted">{t.judo.intro}</p>
-          <p className="mb-8 text-[15px] leading-7 text-text-muted">{t.judo.intro2}</p>
-
-          <p className="mb-4 font-mono text-sm text-text-subtle">{t.judo.principlesTitle}</p>
-          <div className="space-y-3">
+          <div className="mb-3.5 font-mono text-[12px] uppercase tracking-[0.12em] text-text-faint">
+            {t.judo.principlesTitle}
+          </div>
+          <div className="flex flex-col gap-2.5">
             {t.judo.principles.map((p) => (
-              <Card className="p-4" key={p.jp}>
-                <div className="flex items-start gap-4">
-                  <div className="shrink-0 text-center">
-                    <p className="font-mono text-[13px] font-bold text-accent-green">{p.jp}</p>
-                    <p className="font-mono text-[11px] text-text-dim">{p.kanji}</p>
-                  </div>
-                  <div>
-                    <p className="font-sans text-[13px] font-semibold text-text-secondary">
-                      {p.term}
-                    </p>
-                    <p className="mt-1 text-[13px] leading-6 text-text-muted">{p.desc}</p>
-                  </div>
+              <div
+                className="rounded-[10px] border border-border bg-surface px-4 py-[15px] transition-all duration-200 hover:border-[rgba(52,226,154,.35)]"
+                key={p.jp}
+              >
+                <div className="flex items-baseline justify-between gap-2.5">
+                  <span className="font-mono text-[14px] font-semibold text-accent-green">
+                    {p.jp}
+                  </span>
+                  <span className="text-[16px] text-[#39423f]">{p.kanji}</span>
                 </div>
-              </Card>
+                <div className="mb-2 mt-0.5 font-mono text-[11px] italic text-text-dim">
+                  {p.term}
+                </div>
+                <div className="text-[14px] text-text-muted">{p.desc}</div>
+              </div>
             ))}
           </div>
         </div>

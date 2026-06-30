@@ -20,8 +20,10 @@ export interface Translations {
     terminal: {
       whoamiCommand: string
       whoamiResult: string
-      planCommand: string
-      planResult: string
+      focusCommand: string
+      focusResult: string
+      uptimeCommand: string
+      uptimeResult: string
     }
     actions: {
       projects: string
