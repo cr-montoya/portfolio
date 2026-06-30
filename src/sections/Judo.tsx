@@ -97,7 +97,7 @@ export function Judo() {
             x={800}
             y={278}
           >
-            ukemi
+            kake
           </text>
 
           {/* travelling dot along arc */}

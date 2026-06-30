@@ -34,7 +34,7 @@ export function Experience() {
   }, [])
 
   const formatPeriod = (start: string, end: string) =>
-    end === 'present' ? `${start} — ${t.experience.labels.present}` : `${start} — ${end}`
+    end === 'present' ? `${start} · ${t.experience.labels.present}` : `${start} · ${end}`
 
   return (
     <SectionWrapper id="experience">

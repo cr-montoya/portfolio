@@ -1,29 +1,32 @@
 import { useTranslation } from '@/i18n'
-import { SectionTitle, SectionWrapper } from '@/components/ui'
+import { EmailIcon, GitHubIcon, LinkedInIcon, SectionTitle, SectionWrapper } from '@/components/ui'
+
+const contactRows = [
+  {
+    label: 'email',
+    href: 'mailto:cristianmontoyar27@gmail.com',
+    display: 'cristianmontoyar27@gmail.com',
+    Icon: EmailIcon,
+    external: false,
+  },
+  {
+    label: 'github',
+    href: 'https://github.com/cr-montoya',
+    display: 'github.com/cr-montoya',
+    Icon: GitHubIcon,
+    external: true,
+  },
+  {
+    label: 'linkedin',
+    href: 'https://linkedin.com/in/cristian-montoya-devops',
+    display: 'linkedin.com/in/cristian-montoya-devops',
+    Icon: LinkedInIcon,
+    external: true,
+  },
+]
 
 export function Contact() {
   const { t } = useTranslation()
-
-  const contactRows = [
-    {
-      label: 'email',
-      href: 'mailto:cristianmontoyar27@gmail.com',
-      display: 'cristianmontoyar27@gmail.com',
-      symbol: '@',
-    },
-    {
-      label: 'github',
-      href: 'https://github.com/cr-montoya',
-      display: t.contact.links.github,
-      symbol: 'gh',
-    },
-    {
-      label: 'linkedin',
-      href: 'https://linkedin.com/in/cr-montoya',
-      display: t.contact.links.linkedin,
-      symbol: 'in',
-    },
-  ]
 
   return (
     <SectionWrapper id="contact">
@@ -40,14 +43,14 @@ export function Contact() {
         <div className="space-y-3">
           {contactRows.map((row) => (
             <a
-              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:border-[rgba(52,226,154,0.4)] hover:translate-y-[-2px]"
+              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:-translate-y-[2px] hover:border-[rgba(52,226,154,0.4)]"
               href={row.href}
               key={row.label}
-              rel={row.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              target={row.href.startsWith('http') ? '_blank' : undefined}
+              rel={row.external ? 'noopener noreferrer' : undefined}
+              target={row.external ? '_blank' : undefined}
             >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border font-mono text-xs text-accent-green group-hover:border-accent-green/60">
-                {row.symbol}
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-accent-green group-hover:border-accent-green/60">
+                <row.Icon className="size-4.5" />
               </span>
               <span className="min-w-0 truncate font-mono text-sm text-text-muted group-hover:text-text-primary">
                 {row.display}

@@ -17,10 +17,10 @@ export const en = {
     title: 'Cristian Montoya',
     subtitle: 'Senior AWS DevOps Engineer',
     description:
-      'Designing, automating, and securing production cloud on AWS — Terraform, CI/CD, and DevSecOps for 4+ years.',
+      'Designing, automating, and securing production cloud on AWS with Terraform, CI/CD, and DevSecOps for 4+ years.',
     terminal: {
       whoamiCommand: 'whoami',
-      whoamiResult: 'cristian-montoya — senior devops & security engineer',
+      whoamiResult: 'cristian-montoya · senior devops & security engineer',
       focusCommand: 'cat focus.txt',
       focusResult: 'aws · terraform · ci/cd · devsecops',
       uptimeCommand: 'uptime',
@@ -122,13 +122,13 @@ export const en = {
     items: {
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
-        'Security automation and guardrails for AWS accounts — IAM remediation, baseline controls, and operational hardening.',
+        'Security automation and guardrails for AWS accounts: IAM remediation, baseline controls, and operational hardening.',
       wc2026Title: 'World Cup 2026 Prediction Simulator',
       wc2026Description:
         'TypeScript analytics simulator using Poisson modeling, Monte Carlo simulation, and AI-assisted insights.',
       devopsPracticeTitle: 'AWS DevOps Pro Practice',
       devopsPracticeDescription:
-        'Reference patterns for AWS DevOps Professional — Python, SAM/CDK, CI/CD workflows, and observability.',
+        'Reference patterns for AWS DevOps Professional with Python, SAM/CDK, CI/CD workflows, and observability.',
     },
   },
   experience: {
@@ -163,7 +163,7 @@ export const en = {
       teamLeadership:
         'Led and mentored engineers from foundations into capable infrastructure contributors.',
       productionOwnership:
-        'Owned initiatives end to end — from requirement discovery and architecture to deployment and production operation.',
+        'Owned initiatives end to end: from requirement discovery and architecture to deployment and production operation.',
       aiWorkflowAdoption:
         'Integrated AI-assisted engineering into daily delivery: harness-driven execution and spec-driven development.',
       automationTransformation:
@@ -190,11 +190,11 @@ export const en = {
   judo: {
     title: 'judo',
     kicker: 'the discipline behind the engineering',
-    caption: '// the trajectory of a throw — and a deployment',
+    caption: '// the trajectory of a throw, and a deployment',
     intro:
-      'Nine years on the mat — judo and Brazilian jiu-jitsu. Blue belt in judo, multiple national medalist for Antioquia, and university-level competitor.',
+      'Nine years on the mat: judo and Brazilian jiu-jitsu. Blue belt in judo, multiple national medalist for Antioquia, and university-level competitor.',
     intro2:
-      "This isn't a sports page — it's where my engineering instincts come from: calm under pressure, precise timing, and relentless improvement.",
+      "This isn't a sports page. It's where my engineering instincts come from: calm under pressure, precise timing, and relentless improvement.",
     beltsTitle: 'belts',
     beltJudo: 'Blue belt',
     beltBjj: 'White belt',
@@ -213,34 +213,34 @@ export const en = {
         desc: 'Automate for maximum effect with minimum effort.',
       },
       {
-        jp: 'Randori',
-        kanji: '乱取り',
-        term: 'free practice',
-        desc: 'Stay calm and adapt under live production pressure.',
+        jp: 'Seijaku',
+        kanji: '静寂',
+        term: 'calm in chaos',
+        desc: 'Stay composed when systems are on fire. Clear action over reactive noise.',
       },
       {
         jp: 'Ukemi',
         kanji: '受け身',
         term: 'the art of falling',
-        desc: 'Design to fail safely — resilience, backups, recovery.',
+        desc: 'Design to fail safely: resilience, backups, recovery.',
       },
       {
         jp: 'Kaizen',
         kanji: '改善',
         term: 'continuous improvement',
-        desc: 'Iterate relentlessly — small gains compound.',
+        desc: 'Iterate relentlessly. Small gains compound.',
       },
     ],
     stats: [
       { v: '9y', k: 'on the mat' },
-      { v: 'Multi', k: 'national medals' },
+      { v: '3+', k: 'national medals' },
       { v: 'Antioquia', k: 'state team' },
-      { v: 'Uni', k: 'competitor' },
+      { v: 'ASCUN', k: 'collegiate level' },
     ],
   },
   writing: {
     title: 'writing',
-    description: 'Notes on cloud, automation, and the discipline behind it — coming soon.',
+    description: 'Notes on cloud, automation, and the discipline behind it. Coming soon.',
     articles: [
       { date: 'soon', title: 'Building a DevOps practice from zero', tag: 'devops' },
       { date: 'soon', title: 'SOC2 Type II without slowing delivery', tag: 'security' },

@@ -17,10 +17,10 @@ export const es = {
     title: 'Cristian Montoya',
     subtitle: 'Ingeniero Senior AWS DevOps',
     description:
-      'Diseño, automatizo y aseguro nube en producción sobre AWS — Terraform, CI/CD y DevSecOps desde hace 4+ años.',
+      'Diseño, automatizo y aseguro nube en producción sobre AWS con Terraform, CI/CD y DevSecOps desde hace 4+ años.',
     terminal: {
       whoamiCommand: 'whoami',
-      whoamiResult: 'cristian-montoya — ingeniero devops & seguridad senior',
+      whoamiResult: 'cristian-montoya · ingeniero devops & seguridad senior',
       focusCommand: 'cat enfoque.txt',
       focusResult: 'aws · terraform · ci/cd · devsecops',
       uptimeCommand: 'uptime',
@@ -122,13 +122,13 @@ export const es = {
     items: {
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
-        'Automatización y guardrails de seguridad para cuentas AWS — remediación IAM, controles base y hardening operativo.',
+        'Automatización y guardrails de seguridad para cuentas AWS: remediación IAM, controles base y hardening operativo.',
       wc2026Title: 'Simulador de Predicciones Mundial 2026',
       wc2026Description:
         'Simulador analítico en TypeScript con modelado Poisson, simulación Monte Carlo e insights asistidos por IA.',
       devopsPracticeTitle: 'AWS DevOps Pro Practice',
       devopsPracticeDescription:
-        'Patrones de referencia para AWS DevOps Professional — Python, SAM/CDK, workflows CI/CD y observabilidad.',
+        'Patrones de referencia para AWS DevOps Professional con Python, SAM/CDK, workflows CI/CD y observabilidad.',
     },
   },
   experience: {
@@ -163,7 +163,7 @@ export const es = {
       teamLeadership:
         'Lideré y formé ingenieros desde fundamentos hasta perfiles capaces en infraestructura y delivery.',
       productionOwnership:
-        'Lideré iniciativas end to end — desde levantamiento de requerimientos y arquitectura hasta despliegue y operación.',
+        'Lideré iniciativas end to end: desde levantamiento de requerimientos y arquitectura hasta despliegue y operación.',
       aiWorkflowAdoption:
         'Integré ingeniería asistida por IA en la entrega diaria: ejecución harness-driven y spec-driven development.',
       automationTransformation:
@@ -190,11 +190,11 @@ export const es = {
   judo: {
     title: 'judo',
     kicker: 'la disciplina detrás de la ingeniería',
-    caption: '// la trayectoria de una proyección — y de un deploy',
+    caption: '// la trayectoria de una proyección, y de un deploy',
     intro:
-      'Nueve años en el tatami — judo y jiu-jitsu brasileño. Cinturón azul en judo, múltiple medallista nacional por Antioquia y competidor a nivel universitario.',
+      'Nueve años en el tatami: judo y jiu-jitsu brasileño. Cinturón azul en judo, múltiple medallista nacional por Antioquia y competidor a nivel universitario.',
     intro2:
-      'No es una página deportiva — es de donde vienen mis instintos de ingeniería: calma bajo presión, timing preciso y mejora incansable.',
+      'No es una página deportiva. Es de donde vienen mis instintos de ingeniería: calma bajo presión, timing preciso y mejora incansable.',
     beltsTitle: 'cinturones',
     beltJudo: 'Cinturón azul',
     beltBjj: 'Cinturón blanco',
@@ -213,34 +213,34 @@ export const es = {
         desc: 'Automatizar para máximo efecto con mínimo esfuerzo.',
       },
       {
-        jp: 'Randori',
-        kanji: '乱取り',
-        term: 'práctica libre',
-        desc: 'Mantener la calma y adaptarse bajo presión en producción.',
+        jp: 'Seijaku',
+        kanji: '静寂',
+        term: 'calma en el caos',
+        desc: 'Mantener la compostura cuando los sistemas están bajo presión. Acción serena frente al ruido reactivo.',
       },
       {
         jp: 'Ukemi',
         kanji: '受け身',
         term: 'el arte de caer',
-        desc: 'Diseñar para fallar seguro — resiliencia, backups, recuperación.',
+        desc: 'Diseñar para fallar seguro: resiliencia, backups, recuperación.',
       },
       {
         jp: 'Kaizen',
         kanji: '改善',
         term: 'mejora continua',
-        desc: 'Iterar sin descanso — las mejoras pequeñas se acumulan.',
+        desc: 'Iterar sin descanso. Las mejoras pequeñas se acumulan.',
       },
     ],
     stats: [
       { v: '9a', k: 'en el tatami' },
-      { v: 'Múltiple', k: 'medallas nacionales' },
-      { v: 'Antioquia', k: 'selección' },
-      { v: 'Uni', k: 'competidor' },
+      { v: '3+', k: 'medallas nacionales' },
+      { v: 'Antioquia', k: 'selección departamental' },
+      { v: 'ASCUN', k: 'nivel colegial' },
     ],
   },
   writing: {
     title: 'notas',
-    description: 'Notas sobre cloud, automatización y la disciplina detrás — muy pronto.',
+    description: 'Notas sobre cloud, automatización y la disciplina detrás. Muy pronto.',
     articles: [
       { date: 'pronto', title: 'Construir una práctica DevOps desde cero', tag: 'devops' },
       { date: 'pronto', title: 'SOC2 Type II sin frenar la entrega', tag: 'seguridad' },

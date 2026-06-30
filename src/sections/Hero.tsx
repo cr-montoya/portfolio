@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { heroActions, heroSocialLinks } from '@/data/hero'
 import { useTranslation } from '@/i18n'
-import { Button } from '@/components/ui'
+import { Button, EmailIcon, GitHubIcon, LinkedInIcon } from '@/components/ui'
+
+const SOCIAL_ICONS = {
+  github: GitHubIcon,
+  linkedin: LinkedInIcon,
+  email: EmailIcon,
+} as const
 
 interface TermLine {
   cmd: boolean
@@ -87,19 +93,22 @@ export function Hero() {
           ))}
         </div>
 
-        <div className="mt-7 flex items-center gap-5">
-          {heroSocialLinks.map((link) => (
-            <a
-              aria-label={t.hero.social[link.labelKey]}
-              className="font-mono text-sm text-text-subtle transition-colors hover:text-accent-green"
-              href={link.href}
-              key={link.id}
-              rel="noreferrer"
-              target={link.href.startsWith('mailto:') ? undefined : '_blank'}
-            >
-              {link.id}
-            </a>
-          ))}
+        <div className="mt-7 flex items-center gap-4">
+          {heroSocialLinks.map((link) => {
+            const Icon = SOCIAL_ICONS[link.id]
+            return (
+              <a
+                aria-label={t.hero.social[link.labelKey]}
+                className="text-text-subtle transition-colors hover:text-accent-green"
+                href={link.href}
+                key={link.id}
+                rel="noreferrer"
+                target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+              >
+                <Icon className="size-5" />
+              </a>
+            )
+          })}
         </div>
 
         {/* Terminal card — below the hero copy */}
