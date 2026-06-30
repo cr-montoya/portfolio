@@ -8,48 +8,48 @@ interface TermLine {
   text: string
 }
 
-function useTerminalTyper(segments: readonly TermLine[]) {
-  const [lines, setLines] = useState<TermLine[]>([])
-  const [done, setDone] = useState(false)
-  const segsRef = useRef(segments)
+function useTerminalTyper(segs: readonly TermLine[]) {
+  // Capture segs once at mount — animation runs once, no need to restart on re-render
+  const segsRef = useRef(segs)
+
+  const [state, setState] = useState<{ lines: TermLine[]; done: boolean }>({
+    lines: [],
+    done: false,
+  })
 
   useEffect(() => {
+    const segments = segsRef.current
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setLines([...segsRef.current])
-      setDone(true)
+      setState({ lines: [...segments], done: true })
       return
     }
 
+    // Local mutable buffer — avoids closure staleness with functional updaters
+    const buf: TermLine[] = []
     let si = 0
     let ci = 0
-    setLines([])
-    setDone(false)
 
     const timer = setInterval(() => {
-      const segs = segsRef.current
-      if (si >= segs.length) {
+      if (si >= segments.length) {
         clearInterval(timer)
-        setDone(true)
+        setState({ lines: [...buf], done: true })
         return
       }
+      if (ci === 0) buf.push({ cmd: segments[si].cmd, text: '' })
       ci++
-      setLines((prev) => {
-        const next = [...prev]
-        if (ci === 1) next.push({ cmd: segs[si].cmd, text: '' })
-        const last = next.length - 1
-        next[last] = { ...next[last], text: segs[si].text.slice(0, ci) }
-        return next
-      })
-      if (ci >= segs[si].text.length) {
+      buf[buf.length - 1] = { ...buf[buf.length - 1], text: segments[si].text.slice(0, ci) }
+      setState({ lines: [...buf], done: false })
+      if (ci >= segments[si].text.length) {
         si++
         ci = 0
       }
     }, 28)
 
     return () => clearInterval(timer)
-  }, []) // segments array is stable (built from t which is stable on mount)
+  }, []) // intentional: animation runs once on mount
 
-  return { lines, done }
+  return state
 }
 
 export function Hero() {
@@ -72,48 +72,6 @@ export function Hero() {
       id="top"
     >
       <div className="mx-auto w-full max-w-[920px]">
-        {/* Terminal card */}
-        <div className="mb-10 max-w-xl rounded-xl border border-border bg-surface p-5">
-          <div className="mb-3 flex items-center gap-1.5" aria-hidden="true">
-            <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-            <span className="size-2.5 rounded-full bg-[#febc2e]" />
-            <span className="size-2.5 rounded-full bg-[#28c840]" />
-          </div>
-          <div className="space-y-1" aria-live="polite" aria-label="terminal output">
-            {lines.map((line, i) => (
-              <div className="flex gap-2 font-mono text-sm leading-6" key={i}>
-                {line.cmd ? (
-                  <>
-                    <span aria-hidden="true" className="select-none text-accent-green">
-                      ❯
-                    </span>
-                    <span className="text-text-primary">{line.text}</span>
-                  </>
-                ) : (
-                  <span className="pl-5 text-text-muted">{line.text}</span>
-                )}
-                {i === lines.length - 1 && (
-                  <span
-                    aria-hidden="true"
-                    className={`inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green ${done ? 'animate-cursor-blink' : ''}`}
-                  />
-                )}
-              </div>
-            ))}
-            {lines.length === 0 && (
-              <div className="flex gap-2 font-mono text-sm leading-6">
-                <span aria-hidden="true" className="select-none text-accent-green">
-                  ❯
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green"
-                />
-              </div>
-            )}
-          </div>
-        </div>
-
         <p className="mb-3 font-mono text-sm tracking-[0.12em] text-text-muted">{t.hero.eyebrow}</p>
         <h1 className="font-sans text-[clamp(2.6rem,8vw,5.2rem)] font-bold leading-[1.04] tracking-[-0.02em] text-text-primary">
           {t.hero.title}
@@ -142,6 +100,55 @@ export function Hero() {
               {link.id}
             </a>
           ))}
+        </div>
+
+        {/* Terminal card — below the hero copy */}
+        <div className="mt-10 max-w-xl rounded-xl border border-border bg-surface">
+          {/* title bar */}
+          <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
+            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#ff5f57]" />
+            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#febc2e]" />
+            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#28c840]" />
+            <span className="ml-3 font-mono text-[11px] text-text-faint">cristian@cloud ~ %</span>
+          </div>
+
+          {/* output */}
+          <div aria-label="terminal output" aria-live="polite" className="space-y-0.5 px-4 py-4">
+            {lines.map((line, i) => (
+              <div className="flex font-mono text-sm leading-6" key={i}>
+                {line.cmd ? (
+                  <>
+                    <span aria-hidden="true" className="select-none pr-2 text-accent-green">
+                      $
+                    </span>
+                    <span className="text-accent-green">{line.text}</span>
+                  </>
+                ) : (
+                  <span className="pl-5 text-text-primary">{line.text}</span>
+                )}
+                {/* cursor on the actively-typing line */}
+                {!done && i === lines.length - 1 && (
+                  <span
+                    aria-hidden="true"
+                    className="ml-px inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green"
+                  />
+                )}
+              </div>
+            ))}
+
+            {/* idle prompt after animation completes */}
+            <div className="flex font-mono text-sm leading-6">
+              <span aria-hidden="true" className="select-none pr-2 text-accent-green">
+                $
+              </span>
+              {done && (
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green animate-cursor-blink"
+                />
+              )}
+            </div>
+          </div>
         </div>
       </div>
 
