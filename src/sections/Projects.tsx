@@ -33,7 +33,7 @@ export function Projects() {
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                <Badge variant="outline">
+                <Badge>
                   {t.projects.labels.language}: {project.primaryLanguage}
                 </Badge>
                 {project.topics.map((topic) => (

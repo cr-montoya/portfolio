@@ -15,7 +15,7 @@ const buttonVariants: Record<ButtonVariant, string> = {
   primary:
     'border-accent-red bg-accent-red text-background hover:bg-accent-red-bright hover:shadow-glow-red',
   secondary:
-    'border-border-strong bg-transparent text-text-primary hover:border-accent-red hover:text-accent-red',
+    'border-border bg-transparent text-text-primary hover:border-accent-red hover:text-accent-red',
 }
 
 export function Button({
