@@ -50,7 +50,7 @@ export function Navbar({ links, brandLabel, languageToggle }: NavbarProps) {
           <div className="hidden flex-wrap items-center justify-end gap-[18px] md:flex">
             {links.map((link) => (
               <a
-                className="font-mono text-[12.5px] text-text-subtle no-underline transition-colors duration-200 hover:text-accent-green"
+                className="font-mono text-[12.5px] text-text-subtle no-underline transition-colors duration-200 hover:text-accent-red"
                 href={link.href}
                 key={link.href}
               >

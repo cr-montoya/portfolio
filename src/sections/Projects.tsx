@@ -14,7 +14,7 @@ export function Projects() {
       <div className="grid gap-4 sm:grid-cols-2">
         {projects.map((project) => (
           <Card
-            className={`flex flex-col ${project.featured ? 'border-accent-green/40' : ''}`}
+            className={`flex flex-col ${project.featured ? 'border-accent-red/40' : ''}`}
             key={project.id}
           >
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">

@@ -114,7 +114,7 @@ export function Hero() {
             return (
               <a
                 aria-label={t.hero.social[link.labelKey]}
-                className="text-text-subtle transition-colors hover:text-accent-green"
+                className="text-text-subtle transition-colors hover:text-accent-red"
                 href={link.href}
                 key={link.id}
                 rel="noreferrer"
@@ -185,7 +185,7 @@ export function Hero() {
 
       <a
         aria-label={t.hero.scrollIndicator}
-        className="absolute bottom-8 left-1/2 hidden size-8 -translate-x-1/2 items-center justify-center rounded-full border border-border text-text-muted transition-colors hover:border-accent-green hover:text-accent-green md:flex"
+        className="absolute bottom-8 left-1/2 hidden size-8 -translate-x-1/2 items-center justify-center rounded-full border border-border text-text-muted transition-colors hover:border-accent-red hover:text-accent-red md:flex"
         href="#about"
       >
         <span aria-hidden="true" className="font-mono text-base leading-none">

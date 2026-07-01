@@ -48,7 +48,7 @@ export function Experience() {
             className="rounded-xl border border-border bg-surface px-4 py-5 text-center"
             key={stat.k}
           >
-            <p className="font-mono text-xl font-bold text-accent-green">{stat.v}</p>
+            <p className="font-mono text-xl font-bold text-accent-red">{stat.v}</p>
             <p className="mt-1 font-mono text-[11px] text-text-subtle">{stat.k}</p>
           </div>
         ))}
@@ -72,19 +72,17 @@ export function Experience() {
             >
               <span
                 className={`absolute -left-[1.85rem] top-6 size-3 rounded-full border ${
-                  entry.current
-                    ? 'border-accent-green bg-accent-green'
-                    : 'border-border bg-background'
+                  entry.current ? 'border-accent-red bg-accent-red' : 'border-border bg-background'
                 } sm:-left-[2.35rem]`}
               />
 
-              <Card className={entry.current ? 'border-accent-green/40' : ''}>
+              <Card className={entry.current ? 'border-accent-red/40' : ''}>
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <h3 className="font-sans text-lg font-semibold text-text-primary">
                       {t.experience.roles[entry.roleKey]}
                     </h3>
-                    <p className="mt-1 font-mono text-sm text-accent-green">{entry.company}</p>
+                    <p className="mt-1 font-mono text-sm text-accent-red">{entry.company}</p>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {entry.current ? (
@@ -99,7 +97,7 @@ export function Experience() {
                 <ul className="mt-5 space-y-2">
                   {entry.accomplishmentsKeys.map((key) => (
                     <li className="flex gap-2 text-[14px] leading-6 text-text-muted" key={key}>
-                      <span aria-hidden="true" className="mt-[2px] shrink-0 text-accent-green">
+                      <span aria-hidden="true" className="mt-[2px] shrink-0 text-accent-red">
                         ›
                       </span>
                       {t.experience.accomplishments[key]}

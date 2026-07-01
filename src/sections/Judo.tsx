@@ -28,7 +28,7 @@ export function Judo() {
           {/* arc */}
           <path
             d={ARC_PATH}
-            stroke="rgba(52,226,154,.32)"
+            stroke="rgba(232,70,61,.32)"
             strokeDasharray={ARC_LEN}
             strokeDashoffset={ARC_LEN}
             strokeWidth={2}
@@ -36,7 +36,7 @@ export function Judo() {
           />
 
           {/* start — kuzushi */}
-          <circle cx={120} cy={250} fill="#34e29a" r={6} />
+          <circle cx={120} cy={250} fill="#e8463d" r={6} />
           <text
             fill="#5a635f"
             fontFamily="'JetBrains Mono',monospace"
@@ -67,7 +67,7 @@ export function Judo() {
             cy={250}
             fill="none"
             r={9}
-            stroke="#34e29a"
+            stroke="#e8463d"
             strokeWidth={2}
             style={{
               transformBox: 'fill-box',
@@ -80,7 +80,7 @@ export function Judo() {
             cy={250}
             fill="none"
             r={9}
-            stroke="#34e29a"
+            stroke="#e8463d"
             strokeWidth={2}
             style={{
               transformBox: 'fill-box',
@@ -102,9 +102,9 @@ export function Judo() {
 
           {/* travelling dot along arc */}
           <circle
-            fill="#4dffa6"
+            fill="#ff5a4d"
             r={7}
-            style={{ filter: 'drop-shadow(0 0 8px rgba(77,255,166,.8))' }}
+            style={{ filter: 'drop-shadow(0 0 8px rgba(232,70,61,.8))' }}
           >
             <animateMotion dur="2.8s" path={ARC_PATH} repeatCount="indefinite" />
           </circle>
@@ -151,7 +151,7 @@ export function Judo() {
           <div className="mt-2.5 grid grid-cols-2 gap-2.5">
             {t.judo.stats.map((stat) => (
               <div className="rounded-[9px] border border-border px-3.5 py-3" key={stat.k}>
-                <div className="font-mono text-[15px] font-bold text-accent-green">{stat.v}</div>
+                <div className="font-mono text-[15px] font-bold text-accent-red">{stat.v}</div>
                 <div className="mt-0.5 font-mono text-[11px] text-text-subtle">{stat.k}</div>
               </div>
             ))}
@@ -166,11 +166,11 @@ export function Judo() {
           <div className="flex flex-col gap-2.5">
             {t.judo.principles.map((p) => (
               <div
-                className="rounded-[10px] border border-border bg-surface px-4 py-[15px] transition-all duration-200 hover:border-[rgba(52,226,154,.35)]"
+                className="rounded-[10px] border border-border bg-surface px-4 py-[15px] transition-all duration-200 hover:border-[rgba(232,70,61,.35)]"
                 key={p.jp}
               >
                 <div className="flex items-baseline justify-between gap-2.5">
-                  <span className="font-mono text-[14px] font-semibold text-accent-green">
+                  <span className="font-mono text-[14px] font-semibold text-accent-red">
                     {p.jp}
                   </span>
                   <span className="text-[16px] text-[#39423f]">{p.kanji}</span>
