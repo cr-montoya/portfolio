@@ -49,6 +49,7 @@ export interface Translations {
       cicd: string
       security: string
       observability: string
+      aidlc: string
     }
     current: {
       label: string

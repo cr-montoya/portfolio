@@ -53,6 +53,7 @@ export const es = {
       cicd: 'Automatización CI/CD',
       security: 'Seguridad & compliance',
       observability: 'Observabilidad',
+      aidlc: 'Entrega guiada por IA (AIDLC)',
     },
     current: {
       label: 'actualmente',
