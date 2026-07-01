@@ -138,7 +138,6 @@ export interface Translations {
       term: string
       desc: string
     }>
-    stats: Array<{ v: string; k: string }>
   }
   writing: {
     title: string

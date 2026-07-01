@@ -192,12 +192,6 @@ export const en = {
         desc: 'Iterate relentlessly. Small gains compound.',
       },
     ],
-    stats: [
-      { v: '9y', k: 'on the mat' },
-      { v: '3+', k: 'national medals' },
-      { v: 'Antioquia', k: 'state team' },
-      { v: 'ASCUN', k: 'collegiate level' },
-    ],
   },
   writing: {
     title: 'writing',

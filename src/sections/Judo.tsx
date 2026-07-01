@@ -153,15 +153,6 @@ export function Judo() {
               </span>
             </div>
           </div>
-
-          <div className="mt-2.5 grid grid-cols-2 gap-2.5">
-            {t.judo.stats.map((stat) => (
-              <div className="rounded-[9px] border border-border px-3.5 py-3" key={stat.k}>
-                <div className="font-mono text-[15px] font-bold text-accent-red">{stat.v}</div>
-                <div className="mt-0.5 font-mono text-[11px] text-text-subtle">{stat.k}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right: principles */}

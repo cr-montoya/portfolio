@@ -192,12 +192,6 @@ export const es = {
         desc: 'Iterar sin descanso. Las mejoras pequeñas se acumulan.',
       },
     ],
-    stats: [
-      { v: '9a', k: 'en el tatami' },
-      { v: '3+', k: 'medallas nacionales' },
-      { v: 'Antioquia', k: 'selección departamental' },
-      { v: 'ASCUN', k: 'nivel colegial' },
-    ],
   },
   writing: {
     title: 'notas',
