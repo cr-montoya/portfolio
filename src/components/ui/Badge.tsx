@@ -11,7 +11,7 @@ export interface BadgeProps {
 const badgeVariants: Record<BadgeVariant, string> = {
   default: 'border-border bg-surface text-text-muted',
   accent: 'border-accent-red/50 bg-accent-red/10 text-accent-red',
-  outline: 'border-border-strong bg-transparent text-text-primary',
+  outline: 'border-border bg-transparent text-text-primary',
 }
 
 export function Badge({ children, variant = 'default', className = '' }: BadgeProps) {

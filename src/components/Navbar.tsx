@@ -62,13 +62,10 @@ export function Navbar({ links, brandLabel, languageToggle }: NavbarProps) {
         </div>
       </nav>
 
-      <div
-        className="overflow-hidden border-t border-[rgba(255,255,255,0.04)]"
-        style={{ height: 16 }}
-      >
+      <div className="h-4 overflow-hidden border-t border-[rgba(255,255,255,0.04)]">
         <div
           aria-hidden="true"
-          className="whitespace-nowrap text-center font-mono text-[11px] leading-4 tracking-[3px] text-[rgba(52,226,154,0.16)]"
+          className="whitespace-nowrap text-center font-mono text-[11px] leading-4 tracking-[3px] text-accent-green/[0.16]"
         >
           {noise}
         </div>

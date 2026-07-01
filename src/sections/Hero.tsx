@@ -139,7 +139,9 @@ export function Hero() {
               <span aria-hidden="true" className="size-2.5 rounded-full bg-[#ff5f57]" />
               <span aria-hidden="true" className="size-2.5 rounded-full bg-[#febc2e]" />
               <span aria-hidden="true" className="size-2.5 rounded-full bg-[#28c840]" />
-              <span className="ml-3 font-mono text-[11px] text-text-faint">cristian@cloud ~ %</span>
+              <span aria-hidden="true" className="ml-3 font-mono text-[11px] text-text-faint">
+                cristian@cloud ~ %
+              </span>
             </div>
 
             {/* output */}

@@ -129,7 +129,9 @@ export interface Translations {
     intro2: string
     intro3: string
     beltsTitle: string
+    disciplineJudo: string
     beltJudo: string
+    disciplineMuayThai: string
     muayThai: string
     principlesTitle: string
     principles: Array<{

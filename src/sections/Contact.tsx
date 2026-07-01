@@ -43,7 +43,7 @@ export function Contact() {
         <div className="space-y-3">
           {contactRows.map((row) => (
             <a
-              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:-translate-y-[2px] hover:border-[rgba(232,70,61,0.4)]"
+              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:-translate-y-[2px] hover:border-accent-red/40"
               href={row.href}
               key={row.label}
               rel={row.external ? 'noopener noreferrer' : undefined}

@@ -157,7 +157,9 @@ export const es = {
     intro3:
       'Nada de esto es solo una página deportiva. Es donde se forjaron mis instintos de ingeniería, desde leer un sistema antes de que falle hasta actuar con timing deliberado y mejorar sin descanso, porque las mejoras pequeñas y constantes son las que se acumulan en fuerza real.',
     beltsTitle: 'disciplinas',
+    disciplineJudo: 'Judo',
     beltJudo: 'Cinturón azul',
+    disciplineMuayThai: 'Muay Thai',
     muayThai: '6-0 en peleas',
     principlesTitle: 'principios que llevo a producción',
     principles: [

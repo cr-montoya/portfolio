@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from '@/i18n'
 import { SectionTitle, SectionWrapper } from '@/components/ui'
 
@@ -6,6 +7,11 @@ const ARC_LEN = 1150
 
 export function Judo() {
   const { t } = useTranslation()
+  const [reduceMotion] = useState(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
 
   return (
     <SectionWrapper id="judo">
@@ -100,14 +106,16 @@ export function Judo() {
             kake
           </text>
 
-          {/* travelling dot along arc */}
-          <circle
-            fill="#4dffa6"
-            r={7}
-            style={{ filter: 'drop-shadow(0 0 8px rgba(77,255,166,.8))' }}
-          >
-            <animateMotion dur="2.8s" path={ARC_PATH} repeatCount="indefinite" />
-          </circle>
+          {/* travelling dot along arc — omitted when reduced motion is requested */}
+          {!reduceMotion && (
+            <circle
+              fill="#4dffa6"
+              r={7}
+              style={{ filter: 'drop-shadow(0 0 8px rgba(77,255,166,.8))' }}
+            >
+              <animateMotion dur="2.8s" path={ARC_PATH} repeatCount="indefinite" />
+            </circle>
+          )}
         </svg>
 
         <div
@@ -138,7 +146,9 @@ export function Judo() {
                   boxShadow: 'inset 0 0 0 1px rgba(255,255,255,.12)',
                 }}
               />
-              <span className="font-mono text-[13px] text-[#cfd4d1]">Judo · {t.judo.beltJudo}</span>
+              <span className="font-mono text-[13px] text-[#cfd4d1]">
+                {t.judo.disciplineJudo} · {t.judo.beltJudo}
+              </span>
             </div>
             <div className="flex items-center gap-3">
               <div
@@ -149,7 +159,7 @@ export function Judo() {
                 }}
               />
               <span className="font-mono text-[13px] text-[#cfd4d1]">
-                Muay Thai · {t.judo.muayThai}
+                {t.judo.disciplineMuayThai} · {t.judo.muayThai}
               </span>
             </div>
           </div>
@@ -163,7 +173,7 @@ export function Judo() {
           <div className="flex flex-col gap-2.5">
             {t.judo.principles.map((p) => (
               <div
-                className="rounded-[10px] border border-border bg-surface px-4 py-[15px] transition-all duration-200 hover:border-[rgba(232,70,61,.35)]"
+                className="rounded-[10px] border border-border bg-surface px-4 py-[15px] transition-all duration-200 hover:border-accent-red/[0.35]"
                 key={p.jp}
               >
                 <div className="flex items-baseline justify-between gap-2.5">

@@ -157,7 +157,9 @@ export const en = {
     intro3:
       'None of this is just a sports page. It is where my engineering instincts were forged, from reading a system before it fails to acting with deliberate timing and improving relentlessly, because small and consistent gains are what compound into real strength.',
     beltsTitle: 'disciplines',
+    disciplineJudo: 'Judo',
     beltJudo: 'Blue belt',
+    disciplineMuayThai: 'Muay Thai',
     muayThai: '6-0 record',
     principlesTitle: 'principles I carry to production',
     principles: [
