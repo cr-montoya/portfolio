@@ -23,7 +23,7 @@ export function Certifications() {
 
   return (
     <SectionWrapper id="certifications">
-      <SectionTitle label={t.certifications.title} number="05" />
+      <SectionTitle label={t.certifications.title} number="04" />
 
       <p className="mt-2 mb-10 text-[15px] leading-7 text-text-muted">
         {t.certifications.description}

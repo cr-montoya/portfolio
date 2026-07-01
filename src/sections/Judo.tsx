@@ -9,7 +9,7 @@ export function Judo() {
 
   return (
     <SectionWrapper id="judo">
-      <SectionTitle label={t.judo.title} number="04" />
+      <SectionTitle label={t.judo.title} number="05" />
 
       <h2 className="mb-6 font-mono text-[clamp(1.4rem,4vw,2.1rem)] font-semibold leading-tight tracking-[-0.01em] text-text-primary">
         {t.judo.kicker}

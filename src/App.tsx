@@ -21,8 +21,8 @@ export default function App() {
     { href: '#about', label: t.nav.about },
     { href: '#projects', label: t.nav.projects },
     { href: '#experience', label: t.nav.experience },
-    { href: '#judo', label: t.nav.judo },
     { href: '#certifications', label: t.nav.certifications },
+    { href: '#judo', label: t.nav.judo },
     { href: '#writing', label: t.nav.writing },
     { href: '#contact', label: t.nav.contact },
   ] as const
@@ -47,8 +47,8 @@ export default function App() {
         <About />
         <Projects />
         <Experience />
-        <Judo />
         <Certifications />
+        <Judo />
         <Writing />
         <Contact />
       </main>
