@@ -151,9 +151,9 @@ export const es = {
     kicker: 'la disciplina detrás de la ingeniería',
     caption: '// la trayectoria de una proyección, y de un deploy',
     intro:
-      'Mi historia en los deportes de combate empezó hace nueve años, primero en el tatami de judo y más tarde en el Muay Thai. En judo obtuve mi cinturón azul, competí a nivel universitario y fui varias veces medallista en torneos nacionales representando a Antioquia.',
+      'Mi historia en los deportes de combate empezó hace nueve años, y comenzó en el Muay Thai. Conocido como el arte de las ocho extremidades, me atrapó por su filosofía, basada en la disciplina, el respeto y el autocontrol que exige, premiando la paciencia y la precisión por encima de la agresividad. Me mantuve invicto sobre el ring con un récord de 6-0.',
     intro2:
-      'El Muay Thai es donde más lejos he llegado, y hasta ahora me mantengo invicto con un récord de 6-0 sobre el ring. Más allá de la competencia, lo que me atrae del arte es su filosofía, basada en la disciplina, el respeto y el autocontrol que exige. Conocido como el arte de las ocho extremidades, premia la paciencia y la precisión por encima de la agresividad, y enseña a mantener la calma cuando todo está en juego.',
+      'Una lesión terminó alejándome de las artes de golpeo y me llevó al tatami de judo, y ese giro se convirtió en un camino propio. En judo obtuve mi cinturón azul, competí a nivel universitario y fui varias veces medallista en torneos nacionales representando a Antioquia.',
     intro3:
       'Nada de esto es solo una página deportiva. Es donde se forjaron mis instintos de ingeniería, desde leer un sistema antes de que falle hasta actuar con timing deliberado y mejorar sin descanso, porque las mejoras pequeñas y constantes son las que se acumulan en fuerza real.',
     beltsTitle: 'disciplinas',

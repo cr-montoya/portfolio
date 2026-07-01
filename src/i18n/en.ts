@@ -151,9 +151,9 @@ export const en = {
     kicker: 'the discipline behind the engineering',
     caption: '// the trajectory of a throw, and a deployment',
     intro:
-      'My background in combat sports goes back nine years, beginning on the judo mat and later moving into Muay Thai. In judo I earned my blue belt, competed at the university level, and medaled several times at national tournaments representing Antioquia.',
+      'My background in combat sports goes back nine years, and it started in Muay Thai. Known as the art of eight limbs, it drew me in with its philosophy, built on the discipline, respect, and self-control it demands, rewarding patience and precision over raw aggression. I stayed undefeated in the ring with a 6-0 record.',
     intro2:
-      'Muay Thai is where I have pushed the furthest, and so far I have stayed undefeated with a 6-0 record in the ring. Beyond the competition, what draws me to the art is its philosophy, built on the discipline, respect, and self-control it demands. Known as the art of eight limbs, it rewards patience and precision over raw aggression, and it teaches you to stay composed when everything is on the line.',
+      'An injury eventually moved me off the striking arts and onto the judo mat, and that turn became a path of its own. In judo I earned my blue belt, competed at the university level, and medaled several times at national tournaments representing Antioquia.',
     intro3:
       'None of this is just a sports page. It is where my engineering instincts were forged, from reading a system before it fails to acting with deliberate timing and improving relentlessly, because small and consistent gains are what compound into real strength.',
     beltsTitle: 'disciplines',
