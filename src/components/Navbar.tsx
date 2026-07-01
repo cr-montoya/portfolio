@@ -23,7 +23,7 @@ export function Navbar({ links, brandLabel, languageToggle }: NavbarProps) {
     const shuffle = () => {
       if (!active) return
       let s = ''
-      for (let i = 0; i < 72; i++)
+      for (let i = 0; i < 240; i++)
         s +=
           Math.random() < 0.56 ? ' ' : NOISE_CHARS[Math.floor(Math.random() * NOISE_CHARS.length)]
       setNoise(s)
@@ -68,7 +68,7 @@ export function Navbar({ links, brandLabel, languageToggle }: NavbarProps) {
       >
         <div
           aria-hidden="true"
-          className="whitespace-nowrap px-6 font-mono text-[11px] leading-4 tracking-[3px] text-[rgba(52,226,154,0.16)]"
+          className="whitespace-nowrap text-center font-mono text-[11px] leading-4 tracking-[3px] text-[rgba(52,226,154,0.16)]"
         >
           {noise}
         </div>
