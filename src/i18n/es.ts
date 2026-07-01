@@ -191,10 +191,10 @@ export const es = {
       },
     ],
     stats: [
-      { v: '9a', k: 'en el tatami' },
-      { v: '3+', k: 'medallas nacionales' },
-      { v: 'Antioquia', k: 'selección departamental' },
-      { v: 'ASCUN', k: 'nivel colegial' },
+      { v: '9a', k: 'en el tatami', d: 'judo y jiu-jitsu brasileño' },
+      { v: '3+', k: 'medallas nacionales', d: 'podios a nivel nacional' },
+      { v: 'Antioquia', k: 'selección departamental', d: 'representación regional' },
+      { v: 'ASCUN', k: 'nivel colegial', d: 'juegos universitarios nacionales' },
     ],
   },
   writing: {

@@ -28,7 +28,7 @@ export function Judo() {
           {/* arc */}
           <path
             d={ARC_PATH}
-            stroke="rgba(232,70,61,.32)"
+            stroke="rgba(52,226,154,.32)"
             strokeDasharray={ARC_LEN}
             strokeDashoffset={ARC_LEN}
             strokeWidth={2}
@@ -102,9 +102,9 @@ export function Judo() {
 
           {/* travelling dot along arc */}
           <circle
-            fill="#ff5a4d"
+            fill="#4dffa6"
             r={7}
-            style={{ filter: 'drop-shadow(0 0 8px rgba(232,70,61,.8))' }}
+            style={{ filter: 'drop-shadow(0 0 8px rgba(77,255,166,.8))' }}
           >
             <animateMotion dur="2.8s" path={ARC_PATH} repeatCount="indefinite" />
           </circle>
@@ -153,6 +153,7 @@ export function Judo() {
               <div className="rounded-[9px] border border-border px-3.5 py-3" key={stat.k}>
                 <div className="font-mono text-[15px] font-bold text-accent-red">{stat.v}</div>
                 <div className="mt-0.5 font-mono text-[11px] text-text-subtle">{stat.k}</div>
+                <div className="mt-1.5 text-[11px] leading-4 text-text-muted">{stat.d}</div>
               </div>
             ))}
           </div>

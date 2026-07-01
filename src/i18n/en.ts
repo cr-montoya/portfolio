@@ -191,10 +191,10 @@ export const en = {
       },
     ],
     stats: [
-      { v: '9y', k: 'on the mat' },
-      { v: '3+', k: 'national medals' },
-      { v: 'Antioquia', k: 'state team' },
-      { v: 'ASCUN', k: 'collegiate level' },
+      { v: '9y', k: 'on the mat', d: 'judo & brazilian jiu-jitsu' },
+      { v: '3+', k: 'national medals', d: 'podiums at national events' },
+      { v: 'Antioquia', k: 'state team', d: 'regional representation' },
+      { v: 'ASCUN', k: 'collegiate level', d: 'national university games' },
     ],
   },
   writing: {
