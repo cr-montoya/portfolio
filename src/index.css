@@ -6,6 +6,8 @@
   --color-surface: #08090b;
   --color-accent-green: #34e29a;
   --color-accent-green-bright: #4dffa6;
+  --color-accent-red: #e8463d;
+  --color-accent-red-bright: #ff5a4d;
   --color-text-primary: #f2f4f1;
   --color-text-secondary: #e7e9e6;
   --color-text-muted: #9aa39f;
@@ -17,6 +19,7 @@
 
   /* Shadows */
   --shadow-glow-green: 0 0 12px rgba(52 226 154 / 0.45);
+  --shadow-glow-red: 0 0 12px rgba(232 70 61 / 0.45);
 
   /* Fonts */
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;

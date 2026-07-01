@@ -14,7 +14,7 @@ export function Projects() {
       <div className="grid gap-4 sm:grid-cols-2">
         {projects.map((project) => (
           <Card
-            className={`flex flex-col ${project.featured ? 'border-accent-green/40' : ''}`}
+            className={`flex flex-col ${project.featured ? 'border-accent-red/40' : ''}`}
             key={project.id}
           >
             <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -33,7 +33,7 @@ export function Projects() {
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                <Badge variant="outline">
+                <Badge>
                   {t.projects.labels.language}: {project.primaryLanguage}
                 </Badge>
                 {project.topics.map((topic) => (

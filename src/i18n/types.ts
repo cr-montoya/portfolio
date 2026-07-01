@@ -16,6 +16,7 @@ export interface Translations {
     eyebrow: string
     title: string
     subtitle: string
+    // Text wrapped in [[ ]] renders as a red brand-accent highlight (parsed in Hero). Keep the markers when translating.
     description: string
     terminal: {
       whoamiCommand: string
@@ -48,6 +49,7 @@ export interface Translations {
       cicd: string
       security: string
       observability: string
+      aidlc: string
     }
     current: {
       label: string
@@ -60,47 +62,6 @@ export interface Translations {
       locationValue: string
       stackLabel: string
       stackValue: string
-    }
-  }
-  skills: {
-    title: string
-    description: string
-    categories: {
-      cloud: string
-      iac: string
-      cicd: string
-      languages: string
-      observability: string
-      security: string
-    }
-    levels: {
-      expert: string
-      advanced: string
-      familiar: string
-    }
-    items: {
-      aws: string
-      ec2: string
-      lambda: string
-      s3: string
-      terraform: string
-      cdk: string
-      cloudformation: string
-      sam: string
-      githubActions: string
-      codepipeline: string
-      codebuild: string
-      codedeploy: string
-      python: string
-      typescript: string
-      bash: string
-      cloudwatch: string
-      xray: string
-      grafana: string
-      iam: string
-      guardduty: string
-      securityHub: string
-      awsConfig: string
     }
   }
   projects: {
@@ -166,9 +127,12 @@ export interface Translations {
     caption: string
     intro: string
     intro2: string
+    intro3: string
     beltsTitle: string
+    disciplineJudo: string
     beltJudo: string
-    beltBjj: string
+    disciplineMuayThai: string
+    muayThai: string
     principlesTitle: string
     principles: Array<{
       jp: string
@@ -176,7 +140,6 @@ export interface Translations {
       term: string
       desc: string
     }>
-    stats: Array<{ v: string; k: string }>
   }
   writing: {
     title: string

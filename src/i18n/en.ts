@@ -17,7 +17,7 @@ export const en = {
     title: 'Cristian Montoya',
     subtitle: 'Senior AWS DevOps Engineer',
     description:
-      'Designing, automating, and securing production cloud on AWS with Terraform, CI/CD, and DevSecOps for 4+ years.',
+      'Designing, automating, and securing production cloud on AWS with Terraform, CI/CD, and DevSecOps for [[4+ years]].',
     terminal: {
       whoamiCommand: 'whoami',
       whoamiResult: 'cristian-montoya · senior devops & security engineer',
@@ -53,6 +53,7 @@ export const en = {
       cicd: 'CI/CD automation',
       security: 'Security & compliance',
       observability: 'Observability',
+      aidlc: 'AIDLC',
     },
     current: {
       label: 'currently',
@@ -65,48 +66,6 @@ export const en = {
       locationValue: 'Medellín, Colombia',
       stackLabel: 'stack',
       stackValue: 'AWS · Terraform · CI/CD · Security',
-    },
-  },
-  skills: {
-    title: 'Skills',
-    description:
-      'Practical tooling across cloud infrastructure, delivery automation, observability, and security controls.',
-    categories: {
-      cloud: 'Cloud',
-      iac: 'Infrastructure as Code',
-      cicd: 'CI/CD',
-      languages: 'Languages',
-      observability: 'Observability',
-      security: 'Security',
-    },
-    levels: {
-      expert: 'Expert',
-      advanced: 'Advanced',
-      familiar: 'Familiar',
-    },
-    items: {
-      aws: 'AWS',
-      ec2: 'EC2',
-      lambda: 'Lambda',
-      s3: 'S3',
-      terraform: 'Terraform',
-      cdk: 'AWS CDK',
-      cloudformation: 'CloudFormation',
-      sam: 'AWS SAM',
-      githubActions: 'GitHub Actions',
-      codepipeline: 'CodePipeline',
-      codebuild: 'CodeBuild',
-      codedeploy: 'CodeDeploy',
-      python: 'Python',
-      typescript: 'TypeScript',
-      bash: 'Bash',
-      cloudwatch: 'CloudWatch',
-      xray: 'X-Ray',
-      grafana: 'Grafana',
-      iam: 'IAM',
-      guardduty: 'GuardDuty',
-      securityHub: 'Security Hub',
-      awsConfig: 'AWS Config',
     },
   },
   projects: {
@@ -192,12 +151,16 @@ export const en = {
     kicker: 'the discipline behind the engineering',
     caption: '// the trajectory of a throw, and a deployment',
     intro:
-      'Nine years on the mat: judo and Brazilian jiu-jitsu. Blue belt in judo, multiple national medalist for Antioquia, and university-level competitor.',
+      'My background in combat sports goes back nine years, and it started in Muay Thai. Known as the art of eight limbs, it drew me in with its philosophy, built on the discipline, respect, and self-control it demands, rewarding patience and precision over raw aggression. I stayed undefeated in the ring with a 6-0 record.',
     intro2:
-      "This isn't a sports page. It's where my engineering instincts come from: calm under pressure, precise timing, and relentless improvement.",
-    beltsTitle: 'belts',
+      'An injury eventually moved me off the striking arts and onto the judo mat, and that turn became a path of its own. In judo I earned my blue belt, competed at the university level, and medaled several times at national tournaments representing Antioquia.',
+    intro3:
+      'None of this is just a sports page. It is where my engineering instincts were forged, from reading a system before it fails to acting with deliberate timing and improving relentlessly, because small and consistent gains are what compound into real strength.',
+    beltsTitle: 'disciplines',
+    disciplineJudo: 'Judo',
     beltJudo: 'Blue belt',
-    beltBjj: 'White belt',
+    disciplineMuayThai: 'Muay Thai',
+    muayThai: '6-0 record',
     principlesTitle: 'principles I carry to production',
     principles: [
       {
@@ -230,12 +193,6 @@ export const en = {
         term: 'continuous improvement',
         desc: 'Iterate relentlessly. Small gains compound.',
       },
-    ],
-    stats: [
-      { v: '9y', k: 'on the mat' },
-      { v: '3+', k: 'national medals' },
-      { v: 'Antioquia', k: 'state team' },
-      { v: 'ASCUN', k: 'collegiate level' },
     ],
   },
   writing: {
