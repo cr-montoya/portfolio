@@ -11,7 +11,7 @@ export function About() {
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
         <div>
-          <p className="mb-6 font-mono text-sm text-accent-green">{t.about.kicker}</p>
+          <p className="mb-6 font-mono text-sm text-accent-red">{t.about.kicker}</p>
 
           <div className="space-y-4 text-[15px] leading-7 text-text-muted">
             {t.about.body.map((paragraph) => (
@@ -21,11 +21,9 @@ export function About() {
 
           <div className="mt-8">
             <p className="mb-3 font-mono text-sm text-text-subtle">{t.about.focusTitle}</p>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+            <div className="flex flex-wrap gap-2">
               {aboutFocusAreas.map((focusArea) => (
-                <span className="font-mono text-[13px] text-text-muted" key={focusArea.id}>
-                  {t.about.focus[focusArea.labelKey]}
-                </span>
+                <Badge key={focusArea.id}>{t.about.focus[focusArea.labelKey]}</Badge>
               ))}
             </div>
           </div>
@@ -46,8 +44,8 @@ export function About() {
             <p className="font-mono text-sm text-text-primary">{t.about.visual.stackValue}</p>
           </div>
 
-          <div className="mt-8 rounded-lg border border-accent-green/25 bg-accent-green/8 p-4">
-            <p className="font-mono text-sm font-semibold text-accent-green">
+          <div className="mt-8 rounded-lg border border-accent-red/25 bg-accent-red/8 p-4">
+            <p className="font-mono text-sm font-semibold text-accent-red">
               {t.about.current.value}
             </p>
           </div>

@@ -17,7 +17,7 @@ export const es = {
     title: 'Cristian Montoya',
     subtitle: 'Ingeniero Senior AWS DevOps',
     description:
-      'Diseño, automatizo y aseguro nube en producción sobre AWS con Terraform, CI/CD y DevSecOps desde hace 4+ años.',
+      'Diseño, automatizo y aseguro nube en producción sobre AWS con Terraform, CI/CD y DevSecOps desde hace [[4+ años]].',
     terminal: {
       whoamiCommand: 'whoami',
       whoamiResult: 'cristian-montoya · ingeniero devops & seguridad senior',
@@ -53,6 +53,7 @@ export const es = {
       cicd: 'Automatización CI/CD',
       security: 'Seguridad & compliance',
       observability: 'Observabilidad',
+      aidlc: 'AIDLC',
     },
     current: {
       label: 'actualmente',
@@ -65,48 +66,6 @@ export const es = {
       locationValue: 'Medellín, Colombia',
       stackLabel: 'stack',
       stackValue: 'AWS · Terraform · CI/CD · Seguridad',
-    },
-  },
-  skills: {
-    title: 'Habilidades',
-    description:
-      'Herramientas prácticas para infraestructura cloud, automatización de entrega, observabilidad y controles de seguridad.',
-    categories: {
-      cloud: 'Cloud',
-      iac: 'Infraestructura como Código',
-      cicd: 'CI/CD',
-      languages: 'Lenguajes',
-      observability: 'Observabilidad',
-      security: 'Seguridad',
-    },
-    levels: {
-      expert: 'Experto',
-      advanced: 'Avanzado',
-      familiar: 'Familiar',
-    },
-    items: {
-      aws: 'AWS',
-      ec2: 'EC2',
-      lambda: 'Lambda',
-      s3: 'S3',
-      terraform: 'Terraform',
-      cdk: 'AWS CDK',
-      cloudformation: 'CloudFormation',
-      sam: 'AWS SAM',
-      githubActions: 'GitHub Actions',
-      codepipeline: 'CodePipeline',
-      codebuild: 'CodeBuild',
-      codedeploy: 'CodeDeploy',
-      python: 'Python',
-      typescript: 'TypeScript',
-      bash: 'Bash',
-      cloudwatch: 'CloudWatch',
-      xray: 'X-Ray',
-      grafana: 'Grafana',
-      iam: 'IAM',
-      guardduty: 'GuardDuty',
-      securityHub: 'Security Hub',
-      awsConfig: 'AWS Config',
     },
   },
   projects: {
@@ -192,12 +151,16 @@ export const es = {
     kicker: 'la disciplina detrás de la ingeniería',
     caption: '// la trayectoria de una proyección, y de un deploy',
     intro:
-      'Nueve años en el tatami: judo y jiu-jitsu brasileño. Cinturón azul en judo, múltiple medallista nacional por Antioquia y competidor a nivel universitario.',
+      'Mi historia en los deportes de combate empezó hace nueve años, y comenzó en el Muay Thai. Conocido como el arte de las ocho extremidades, me atrapó por su filosofía, basada en la disciplina, el respeto y el autocontrol que exige, premiando la paciencia y la precisión por encima de la agresividad. Me mantuve invicto sobre el ring con un récord de 6-0.',
     intro2:
-      'No es una página deportiva. Es de donde vienen mis instintos de ingeniería: calma bajo presión, timing preciso y mejora incansable.',
-    beltsTitle: 'cinturones',
+      'Una lesión terminó alejándome de las artes de golpeo y me llevó al tatami de judo, y ese giro se convirtió en un camino propio. En judo obtuve mi cinturón azul, competí a nivel universitario y fui varias veces medallista en torneos nacionales representando a Antioquia.',
+    intro3:
+      'Nada de esto es solo una página deportiva. Es donde se forjaron mis instintos de ingeniería, desde leer un sistema antes de que falle hasta actuar con timing deliberado y mejorar sin descanso, porque las mejoras pequeñas y constantes son las que se acumulan en fuerza real.',
+    beltsTitle: 'disciplinas',
+    disciplineJudo: 'Judo',
     beltJudo: 'Cinturón azul',
-    beltBjj: 'Cinturón blanco',
+    disciplineMuayThai: 'Muay Thai',
+    muayThai: '6-0 en peleas',
     principlesTitle: 'principios que llevo a producción',
     principles: [
       {
@@ -230,12 +193,6 @@ export const es = {
         term: 'mejora continua',
         desc: 'Iterar sin descanso. Las mejoras pequeñas se acumulan.',
       },
-    ],
-    stats: [
-      { v: '9a', k: 'en el tatami' },
-      { v: '3+', k: 'medallas nacionales' },
-      { v: 'Antioquia', k: 'selección departamental' },
-      { v: 'ASCUN', k: 'nivel colegial' },
     ],
   },
   writing: {

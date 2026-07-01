@@ -43,13 +43,13 @@ export function Contact() {
         <div className="space-y-3">
           {contactRows.map((row) => (
             <a
-              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:-translate-y-[2px] hover:border-[rgba(52,226,154,0.4)]"
+              className="group flex items-center gap-4 rounded-xl border border-border bg-surface p-4 transition-all duration-200 hover:-translate-y-[2px] hover:border-accent-red/40"
               href={row.href}
               key={row.label}
               rel={row.external ? 'noopener noreferrer' : undefined}
               target={row.external ? '_blank' : undefined}
             >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-accent-green group-hover:border-accent-green/60">
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-accent-red group-hover:border-accent-red/60">
                 <row.Icon className="size-4.5" />
               </span>
               <span className="min-w-0 truncate font-mono text-sm text-text-muted group-hover:text-text-primary">

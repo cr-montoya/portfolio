@@ -23,7 +23,7 @@ export function Certifications() {
 
   return (
     <SectionWrapper id="certifications">
-      <SectionTitle label={t.certifications.title} number="05" />
+      <SectionTitle label={t.certifications.title} number="04" />
 
       <p className="mt-2 mb-10 text-[15px] leading-7 text-text-muted">
         {t.certifications.description}
@@ -54,7 +54,7 @@ export function Certifications() {
                 <p className="text-xs text-text-muted">{cert.issuer}</p>
                 <div className="mt-auto flex items-center justify-center gap-2">
                   <span
-                    className={`inline-block size-1.5 rounded-full ${isActive(cert) ? 'bg-accent-green' : 'bg-text-dim'}`}
+                    className={`inline-block size-1.5 rounded-full ${isActive(cert) ? 'bg-accent-red' : 'bg-text-dim'}`}
                   />
                   <p className="font-mono text-[11px] text-text-subtle">{formatStatus(cert)}</p>
                 </div>

@@ -22,6 +22,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
 
   useEffect(() => {
     window.localStorage.setItem(localeStorageKey, locale)
+    document.documentElement.lang = locale
   }, [locale])
 
   const value = useMemo<TranslationContextValue>(
