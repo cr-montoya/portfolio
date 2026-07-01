@@ -127,9 +127,10 @@ export interface Translations {
     caption: string
     intro: string
     intro2: string
+    intro3: string
     beltsTitle: string
     beltJudo: string
-    beltBjj: string
+    muayThai: string
     principlesTitle: string
     principles: Array<{
       jp: string
@@ -137,7 +138,7 @@ export interface Translations {
       term: string
       desc: string
     }>
-    stats: Array<{ v: string; k: string; d: string }>
+    stats: Array<{ v: string; k: string }>
   }
   writing: {
     title: string

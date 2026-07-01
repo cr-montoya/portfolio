@@ -151,12 +151,14 @@ export const es = {
     kicker: 'la disciplina detrás de la ingeniería',
     caption: '// la trayectoria de una proyección, y de un deploy',
     intro:
-      'Nueve años en el tatami: judo y jiu-jitsu brasileño. Cinturón azul en judo, múltiple medallista nacional por Antioquia y competidor a nivel universitario.',
+      'Mi historia en los deportes de combate empezó hace nueve años, primero en el tatami de judo y más tarde en el Muay Thai. En judo obtuve mi cinturón azul, competí a nivel universitario y fui varias veces medallista en torneos nacionales representando a Antioquia.',
     intro2:
-      'No es una página deportiva. Es de donde vienen mis instintos de ingeniería: calma bajo presión, timing preciso y mejora incansable.',
-    beltsTitle: 'cinturones',
+      'El Muay Thai es donde más lejos he llegado, y hasta ahora me mantengo invicto con un récord de 6-0 sobre el ring. Más allá de la competencia, lo que me atrae del arte es su filosofía, basada en la disciplina, el respeto y el autocontrol que exige. Conocido como el arte de las ocho extremidades, premia la paciencia y la precisión por encima de la agresividad, y enseña a mantener la calma cuando todo está en juego.',
+    intro3:
+      'Nada de esto es solo una página deportiva. Es donde se forjaron mis instintos de ingeniería, desde leer un sistema antes de que falle hasta actuar con timing deliberado y mejorar sin descanso, porque las mejoras pequeñas y constantes son las que se acumulan en fuerza real.',
+    beltsTitle: 'disciplinas',
     beltJudo: 'Cinturón azul',
-    beltBjj: 'Cinturón blanco',
+    muayThai: '6-0 en peleas',
     principlesTitle: 'principios que llevo a producción',
     principles: [
       {
@@ -191,10 +193,10 @@ export const es = {
       },
     ],
     stats: [
-      { v: '9a', k: 'en el tatami', d: 'judo y jiu-jitsu brasileño' },
-      { v: '3+', k: 'medallas nacionales', d: 'podios a nivel nacional' },
-      { v: 'Antioquia', k: 'selección departamental', d: 'representación regional' },
-      { v: 'ASCUN', k: 'nivel colegial', d: 'juegos universitarios nacionales' },
+      { v: '9a', k: 'en el tatami' },
+      { v: '3+', k: 'medallas nacionales' },
+      { v: 'Antioquia', k: 'selección departamental' },
+      { v: 'ASCUN', k: 'nivel colegial' },
     ],
   },
   writing: {

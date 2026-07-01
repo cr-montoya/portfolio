@@ -124,6 +124,7 @@ export function Judo() {
         <div className="flex flex-col gap-3.5 text-[16.5px] leading-7 text-text-muted">
           <p>{t.judo.intro}</p>
           <p>{t.judo.intro2}</p>
+          <p>{t.judo.intro3}</p>
 
           <div className="mt-2 flex flex-col gap-2.5">
             <div className="font-mono text-[12px] uppercase tracking-[0.12em] text-text-faint">
@@ -142,9 +143,14 @@ export function Judo() {
             <div className="flex items-center gap-3">
               <div
                 className="h-[15px] w-[118px] shrink-0 rounded-[3px]"
-                style={{ background: '#e9ecee', boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.25)' }}
+                style={{
+                  background: '#e8463d',
+                  boxShadow: 'inset 0 0 0 1px rgba(255,255,255,.12)',
+                }}
               />
-              <span className="font-mono text-[13px] text-[#cfd4d1]">BJJ · {t.judo.beltBjj}</span>
+              <span className="font-mono text-[13px] text-[#cfd4d1]">
+                Muay Thai · {t.judo.muayThai}
+              </span>
             </div>
           </div>
 
@@ -153,7 +159,6 @@ export function Judo() {
               <div className="rounded-[9px] border border-border px-3.5 py-3" key={stat.k}>
                 <div className="font-mono text-[15px] font-bold text-accent-red">{stat.v}</div>
                 <div className="mt-0.5 font-mono text-[11px] text-text-subtle">{stat.k}</div>
-                <div className="mt-1.5 text-[11px] leading-4 text-text-muted">{stat.d}</div>
               </div>
             ))}
           </div>

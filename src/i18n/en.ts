@@ -151,12 +151,14 @@ export const en = {
     kicker: 'the discipline behind the engineering',
     caption: '// the trajectory of a throw, and a deployment',
     intro:
-      'Nine years on the mat: judo and Brazilian jiu-jitsu. Blue belt in judo, multiple national medalist for Antioquia, and university-level competitor.',
+      'My background in combat sports goes back nine years, beginning on the judo mat and later moving into Muay Thai. In judo I earned my blue belt, competed at the university level, and medaled several times at national tournaments representing Antioquia.',
     intro2:
-      "This isn't a sports page. It's where my engineering instincts come from: calm under pressure, precise timing, and relentless improvement.",
-    beltsTitle: 'belts',
+      'Muay Thai is where I have pushed the furthest, and so far I have stayed undefeated with a 6-0 record in the ring. Beyond the competition, what draws me to the art is its philosophy, built on the discipline, respect, and self-control it demands. Known as the art of eight limbs, it rewards patience and precision over raw aggression, and it teaches you to stay composed when everything is on the line.',
+    intro3:
+      'None of this is just a sports page. It is where my engineering instincts were forged, from reading a system before it fails to acting with deliberate timing and improving relentlessly, because small and consistent gains are what compound into real strength.',
+    beltsTitle: 'disciplines',
     beltJudo: 'Blue belt',
-    beltBjj: 'White belt',
+    muayThai: '6-0 record',
     principlesTitle: 'principles I carry to production',
     principles: [
       {
@@ -191,10 +193,10 @@ export const en = {
       },
     ],
     stats: [
-      { v: '9y', k: 'on the mat', d: 'judo & brazilian jiu-jitsu' },
-      { v: '3+', k: 'national medals', d: 'podiums at national events' },
-      { v: 'Antioquia', k: 'state team', d: 'regional representation' },
-      { v: 'ASCUN', k: 'collegiate level', d: 'national university games' },
+      { v: '9y', k: 'on the mat' },
+      { v: '3+', k: 'national medals' },
+      { v: 'Antioquia', k: 'state team' },
+      { v: 'ASCUN', k: 'collegiate level' },
     ],
   },
   writing: {
