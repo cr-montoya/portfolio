@@ -16,6 +16,7 @@ export interface Translations {
     eyebrow: string
     title: string
     subtitle: string
+    // Text wrapped in [[ ]] renders as a red brand-accent highlight (parsed in Hero). Keep the markers when translating.
     description: string
     terminal: {
       whoamiCommand: string

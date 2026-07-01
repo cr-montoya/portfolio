@@ -31,7 +31,7 @@ export function LanguageToggle({
             className={[
               'rounded-full px-3 py-1 font-mono text-sm transition-colors',
               isActive
-                ? 'bg-accent-green text-background'
+                ? 'bg-accent-red text-background'
                 : 'text-text-muted hover:bg-surface-hover hover:text-text-primary',
             ].join(' ')}
             key={option.code}

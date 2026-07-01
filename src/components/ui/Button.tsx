@@ -12,9 +12,10 @@ export interface ButtonProps {
 }
 
 const buttonVariants: Record<ButtonVariant, string> = {
-  primary: 'border-accent-green bg-accent-green text-background hover:shadow-glow-green',
+  primary:
+    'border-accent-red bg-accent-red text-background hover:bg-accent-red-bright hover:shadow-glow-red',
   secondary:
-    'border-border-strong bg-transparent text-text-primary hover:border-accent-cyan hover:text-accent-cyan',
+    'border-border-strong bg-transparent text-text-primary hover:border-accent-red hover:text-accent-red',
 }
 
 export function Button({

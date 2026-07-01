@@ -21,11 +21,9 @@ export function About() {
 
           <div className="mt-8">
             <p className="mb-3 font-mono text-sm text-text-subtle">{t.about.focusTitle}</p>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+            <div className="flex flex-wrap gap-2">
               {aboutFocusAreas.map((focusArea) => (
-                <span className="font-mono text-[13px] text-text-muted" key={focusArea.id}>
-                  {t.about.focus[focusArea.labelKey]}
-                </span>
+                <Badge key={focusArea.id}>{t.about.focus[focusArea.labelKey]}</Badge>
               ))}
             </div>
           </div>

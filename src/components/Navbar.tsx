@@ -40,7 +40,7 @@ export function Navbar({ links, brandLabel, languageToggle }: NavbarProps) {
     <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(0,0,0,0.74)] backdrop-blur-[11px]">
       <nav className="mx-auto flex h-[60px] max-w-[920px] items-center justify-between gap-4 px-6">
         <a
-          className="font-mono text-[15px] font-bold tracking-[0.02em] text-accent-green no-underline"
+          className="font-mono text-[15px] font-bold tracking-[0.02em] text-accent-red no-underline"
           href="#top"
         >
           {brandLabel}

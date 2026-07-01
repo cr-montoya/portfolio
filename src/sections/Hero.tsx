@@ -58,6 +58,19 @@ function useTerminalTyper(segs: readonly TermLine[]) {
   return state
 }
 
+// Renders a string with [[...]] segments emphasized in the red brand accent.
+function renderHighlighted(text: string) {
+  return text.split(/\[\[(.+?)\]\]/).map((part, i) =>
+    i % 2 === 1 ? (
+      <span className="text-accent-red" key={i}>
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 export function Hero() {
   const { t } = useTranslation()
 
@@ -82,8 +95,10 @@ export function Hero() {
         <h1 className="font-sans text-[clamp(2.6rem,8vw,5.2rem)] font-bold leading-[1.04] tracking-[-0.02em] text-text-primary">
           {t.hero.title}
         </h1>
-        <p className="mt-4 font-mono text-base text-accent-green">{t.hero.subtitle}</p>
-        <p className="mt-5 max-w-xl text-[15px] leading-7 text-text-muted">{t.hero.description}</p>
+        <p className="mt-4 font-mono text-base text-accent-red">{t.hero.subtitle}</p>
+        <p className="mt-5 max-w-xl text-[15px] leading-7 text-text-muted">
+          {renderHighlighted(t.hero.description)}
+        </p>
 
         <div className="mt-9 flex flex-wrap gap-3">
           {heroActions.map((action) => (
@@ -112,50 +127,57 @@ export function Hero() {
         </div>
 
         {/* Terminal card — below the hero copy */}
-        <div className="mt-10 max-w-xl rounded-xl border border-border bg-surface">
-          {/* title bar */}
-          <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
-            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#ff5f57]" />
-            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#febc2e]" />
-            <span aria-hidden="true" className="size-2.5 rounded-full bg-[#28c840]" />
-            <span className="ml-3 font-mono text-[11px] text-text-faint">cristian@cloud ~ %</span>
-          </div>
+        <div className="relative mt-10 max-w-xl overflow-hidden rounded-xl border border-border bg-surface shadow-[0_0_60px_-24px_rgba(52,226,154,0.5)]">
+          {/* green terminal glow */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent-green/[0.10] via-transparent to-transparent"
+          />
+          <div className="relative">
+            {/* title bar */}
+            <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
+              <span aria-hidden="true" className="size-2.5 rounded-full bg-[#ff5f57]" />
+              <span aria-hidden="true" className="size-2.5 rounded-full bg-[#febc2e]" />
+              <span aria-hidden="true" className="size-2.5 rounded-full bg-[#28c840]" />
+              <span className="ml-3 font-mono text-[11px] text-text-faint">cristian@cloud ~ %</span>
+            </div>
 
-          {/* output */}
-          <div aria-label="terminal output" aria-live="polite" className="space-y-0.5 px-4 py-4">
-            {lines.map((line, i) => (
-              <div className="flex font-mono text-sm leading-6" key={i}>
-                {line.cmd ? (
-                  <>
-                    <span aria-hidden="true" className="select-none pr-2 text-accent-green">
-                      $
-                    </span>
-                    <span className="text-accent-green">{line.text}</span>
-                  </>
-                ) : (
-                  <span className="pl-5 text-text-primary">{line.text}</span>
-                )}
-                {/* cursor on the actively-typing line */}
-                {!done && i === lines.length - 1 && (
+            {/* output */}
+            <div aria-label="terminal output" aria-live="polite" className="space-y-0.5 px-4 py-4">
+              {lines.map((line, i) => (
+                <div className="flex font-mono text-sm leading-6" key={i}>
+                  {line.cmd ? (
+                    <>
+                      <span aria-hidden="true" className="select-none pr-2 text-accent-green">
+                        $
+                      </span>
+                      <span className="text-accent-green">{line.text}</span>
+                    </>
+                  ) : (
+                    <span className="pl-5 text-text-primary">{line.text}</span>
+                  )}
+                  {/* cursor on the actively-typing line */}
+                  {!done && i === lines.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="ml-px inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green"
+                    />
+                  )}
+                </div>
+              ))}
+
+              {/* idle prompt after animation completes */}
+              <div className="flex font-mono text-sm leading-6">
+                <span aria-hidden="true" className="select-none pr-2 text-accent-green">
+                  $
+                </span>
+                {done && (
                   <span
                     aria-hidden="true"
-                    className="ml-px inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green"
+                    className="inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green animate-cursor-blink"
                   />
                 )}
               </div>
-            ))}
-
-            {/* idle prompt after animation completes */}
-            <div className="flex font-mono text-sm leading-6">
-              <span aria-hidden="true" className="select-none pr-2 text-accent-green">
-                $
-              </span>
-              {done && (
-                <span
-                  aria-hidden="true"
-                  className="inline-block h-[1.1em] w-[2px] translate-y-[1px] bg-accent-green animate-cursor-blink"
-                />
-              )}
             </div>
           </div>
         </div>

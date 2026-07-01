@@ -17,7 +17,7 @@ export const en = {
     title: 'Cristian Montoya',
     subtitle: 'Senior AWS DevOps Engineer',
     description:
-      'Designing, automating, and securing production cloud on AWS with Terraform, CI/CD, and DevSecOps for 4+ years.',
+      'Designing, automating, and securing production cloud on AWS with Terraform, CI/CD, and DevSecOps for [[4+ years]].',
     terminal: {
       whoamiCommand: 'whoami',
       whoamiResult: 'cristian-montoya · senior devops & security engineer',
