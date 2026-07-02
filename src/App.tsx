@@ -19,11 +19,11 @@ export default function App() {
 
   const navLinks = [
     { href: '#about', label: t.nav.about },
-    { href: '#projects', label: t.nav.projects },
     { href: '#experience', label: t.nav.experience },
     { href: '#certifications', label: t.nav.certifications },
     { href: '#judo', label: t.nav.judo },
     { href: '#writing', label: t.nav.writing },
+    { href: '#projects', label: t.nav.projects },
     { href: '#contact', label: t.nav.contact },
   ] as const
 
@@ -45,11 +45,11 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Projects />
         <Experience />
         <Certifications />
         <Judo />
         <Writing />
+        <Projects />
         <Contact />
       </main>
     </div>
