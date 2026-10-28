@@ -79,6 +79,9 @@ export const es = {
       language: 'lenguaje',
     },
     items: {
+      ghostStockTitle: 'GhostStock',
+      ghostStockDescription:
+        'Inventario por foto en AWS. Amazon Bedrock (Converse API) responde con una única herramienta forzada y un esquema estricto sin campos de precio, cantidad ni SKU, así el modelo no puede inventar datos. Serverless con CDK v2, React 19 y gates de Playwright; specs escritas con Kiro, hecho en un día.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
         'Automatización y guardrails de seguridad para cuentas AWS: remediación IAM, controles base y hardening operativo.',
@@ -102,7 +105,7 @@ export const es = {
     stats: [
       { v: 'SOC2', k: 'Type I / II' },
       { v: 'HIPAA', k: 'infra conforme' },
-      { v: '80%', k: 'deploys más rápidos' },
+      { v: '95%', k: 'deploys más rápidos' },
       { v: 'IA', k: 'workflows habilitados' },
     ],
     roles: {
@@ -128,11 +131,14 @@ export const es = {
       automationTransformation:
         'Convertí delivery semi-manual en un ecosistema DevOps automatizado para productos y entornos.',
       selfHostedMigration:
-        'Migré flujos de delivery y control de código hacia plataformas self-hosted como GitLab.',
+        'Monté y administré una plataforma self-hosted: GitLab con cientos de repositorios y ~120 usuarios, gitlab-runner, Plane, AppFlowy, Coolify, PostHog, Pangolin, Passbolt y Uptime Kuma.',
       terraformConsolidation:
         'Consolidé infraestructura fragmentada en repositorios Terraform reutilizables y bases cloud seguras.',
       deploymentReduction:
-        'Construí bases de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo tiempos de despliegue en 80%.',
+        'Construí bases de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo los despliegues de 40 a 2 minutos (~95 %).',
+      availabilityImprovement:
+        'Llevé producción de caídas en cada despliegue a 99,9 % de disponibilidad, medida con UptimeRobot.',
+      costReduction: 'Reduje los costos de infraestructura en 40 %.',
     },
   },
   certifications: {

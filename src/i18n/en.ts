@@ -79,6 +79,9 @@ export const en = {
       language: 'language',
     },
     items: {
+      ghostStockTitle: 'GhostStock',
+      ghostStockDescription:
+        'Photo-based inventory on AWS. Amazon Bedrock (Converse API) answers through one forced tool with a strict schema that has no price, quantity, or SKU fields, so the model cannot invent data. Serverless with CDK v2, React 19, and Playwright gates; specs written with Kiro, built in one day.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
         'Security automation and guardrails for AWS accounts: IAM remediation, baseline controls, and operational hardening.',
@@ -102,7 +105,7 @@ export const en = {
     stats: [
       { v: 'SOC2', k: 'Type I / II' },
       { v: 'HIPAA', k: 'compliant infra' },
-      { v: '80%', k: 'faster deployments' },
+      { v: '95%', k: 'faster deployments' },
       { v: 'AI', k: 'enabled workflows' },
     ],
     roles: {
@@ -128,11 +131,14 @@ export const en = {
       automationTransformation:
         'Turned semi-manual delivery into an automated DevOps ecosystem across products and environments.',
       selfHostedMigration:
-        'Migrated delivery and source-control workflows toward self-hosted platforms such as GitLab.',
+        'Built and ran a self-hosted platform: GitLab with hundreds of repositories and ~120 users, gitlab-runner, Plane, AppFlowy, Coolify, PostHog, Pangolin, Passbolt, and Uptime Kuma.',
       terraformConsolidation:
         'Consolidated fragmented infrastructure into reusable Terraform repositories and secure cloud foundations.',
       deploymentReduction:
-        'Built early delivery foundations with Linux, Docker, CircleCI, and GitLab CI, reducing deployment times by 80%.',
+        'Built early delivery foundations with Linux, Docker, CircleCI, and GitLab CI, cutting deployments from 40 to 2 minutes (~95%).',
+      availabilityImprovement:
+        'Took production from downtime on every deployment to 99.9% availability, measured with UptimeRobot.',
+      costReduction: 'Reduced infrastructure costs by 40%.',
     },
   },
   certifications: {

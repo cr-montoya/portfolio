@@ -12,6 +12,16 @@ export const certifications: Certification[] = [
     expiresDate: '2029-05-20',
   },
   {
+    id: 'aws-ai-practitioner',
+    name: 'AWS Certified AI Practitioner',
+    issuer: 'Amazon Web Services Training and Certification',
+    badgeImageUrl:
+      'https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png',
+    verifyUrl: 'https://www.credly.com/badges/b4ad9af2-bc9b-4ae2-beaf-48e5fdbf8aaf',
+    issuedDate: '2026-09-28',
+    expiresDate: '2029-09-28',
+  },
+  {
     id: 'aws-solutions-architect-associate',
     name: 'AWS Certified Solutions Architect – Associate',
     issuer: 'Amazon Web Services Training and Certification',

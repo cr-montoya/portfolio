@@ -1,7 +1,11 @@
 import type { Translations } from '@/i18n/types'
 
 export interface Project {
-  id: 'aws-account-security-toolkit' | 'wc2026-prediction-simulator' | 'aws-devops-pro-practice'
+  id:
+    | 'ghoststock'
+    | 'aws-account-security-toolkit'
+    | 'wc2026-prediction-simulator'
+    | 'aws-devops-pro-practice'
   nameWithOwner: string
   repositoryUrl: string
   demoUrl?: string

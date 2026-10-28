@@ -74,6 +74,8 @@ export interface Translations {
       language: string
     }
     items: {
+      ghostStockTitle: string
+      ghostStockDescription: string
       awsSecurityTitle: string
       awsSecurityDescription: string
       wc2026Title: string
@@ -108,6 +110,8 @@ export interface Translations {
       selfHostedMigration: string
       terraformConsolidation: string
       deploymentReduction: string
+      availabilityImprovement: string
+      costReduction: string
     }
   }
   certifications: {

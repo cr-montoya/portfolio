@@ -14,6 +14,7 @@ export const experienceEntries: readonly ExperienceEntry[] = [
       'complianceSecurity',
       'productionOwnership',
       'teamLeadership',
+      'costReduction',
       'aiWorkflowAdoption',
     ],
     technologies: [
@@ -33,13 +34,14 @@ export const experienceEntries: readonly ExperienceEntry[] = [
     roleKey: 'devopsSecurityEngineer',
     period: {
       start: '2022',
-      end: '2024',
+      end: '2025',
     },
     accomplishmentsKeys: [
       'automationTransformation',
       'selfHostedMigration',
       'terraformConsolidation',
       'deploymentReduction',
+      'availabilityImprovement',
     ],
     technologies: ['Linux', 'Docker', 'CircleCI', 'GitLab CI', 'Terraform', 'AWS'],
     current: false,

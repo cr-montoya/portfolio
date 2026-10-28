@@ -2,6 +2,16 @@ import type { Project } from '@/types/project'
 
 export const projects: readonly Project[] = [
   {
+    id: 'ghoststock',
+    nameWithOwner: 'cr-montoya/GhostStock',
+    repositoryUrl: 'https://github.com/cr-montoya/GhostStock',
+    primaryLanguage: 'TypeScript',
+    topics: ['AWS', 'Amazon Bedrock', 'CDK', 'Kiro'],
+    featured: true,
+    titleKey: 'ghostStockTitle',
+    descriptionKey: 'ghostStockDescription',
+  },
+  {
     id: 'aws-account-security-toolkit',
     nameWithOwner: 'cr-montoya/aws-account-security-toolkit',
     repositoryUrl: 'https://github.com/cr-montoya/aws-account-security-toolkit',
