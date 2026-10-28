@@ -123,6 +123,7 @@ export interface Translations {
       badgeAlt: string
       active: string
       retired: string
+      upcoming: string
     }
   }
   judo: {

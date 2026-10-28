@@ -150,6 +150,7 @@ export const en = {
       badgeAlt: 'badge',
       active: 'active',
       retired: 'retired',
+      upcoming: 'In progress · exam',
     },
   },
   judo: {

@@ -150,6 +150,7 @@ export const es = {
       badgeAlt: 'insignia',
       active: 'activo',
       retired: 'retirado',
+      upcoming: 'En curso · examen',
     },
   },
   judo: {
