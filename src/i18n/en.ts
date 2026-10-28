@@ -42,9 +42,9 @@ export const en = {
     eyebrow: 'production cloud, built with intent',
     kicker: 'production cloud, built with intent',
     body: [
-      "I'm a Senior AWS DevOps Engineer based in Medellín, Colombia, with 4+ years designing, automating, securing, and operating resilient production cloud environments.",
-      'My work centers on infrastructure as code, CI/CD, containerized workloads, cloud networking, observability, backup, and disaster recovery.',
-      "I've led AWS initiatives from architecture and Terraform implementation to delivery automation, while supporting SOC2/HIPAA compliance and stronger security controls.",
+      "I'm a Senior AWS DevOps Engineer based in Medellín, Colombia, with 4+ years designing AWS solutions end to end, from requirements and architecture through production deployment and day-to-day operation.",
+      'I lead DevOps and security at Alternova, where I built the practice from zero with Terraform, AWS CDK, and CI/CD, designed a banking platform, and lead SOC 2, ISO 27001, and HIPAA compliance.',
+      'I also build projects with Amazon Bedrock and agentic architectures on MCP, guided by Spec Driven Development and AIDLC.',
     ],
     focusTitle: 'focus areas',
     focus: {
@@ -79,9 +79,18 @@ export const en = {
       language: 'language',
     },
     items: {
+      ghostStockTitle: 'GhostStock',
+      ghostStockDescription:
+        'Photo-based inventory on AWS. Amazon Bedrock Converse API answers through one forced tool with a strict schema that has no price, quantity, or SKU fields, so the model cannot invent data. Serverless with CDK v2, React 19, and Playwright gates, with specs written in Kiro and built in one day.',
+      atlasTitle: 'Atlas',
+      atlasDescription:
+        'Local-first personal finance and athletic performance app with an agentic architecture. Headless agents run from an AI job queue with tools scoped per job type, Garmin and Polar data arrives through MCP, and every side effect is verified after each run. Private by design with local speech to text, covered by 550 tests, with a fictional-data demo that runs in three commands.',
+      appNutriTitle: 'AppNutri',
+      appNutriDescription:
+        'Early-stage multi-tenant SaaS for nutrition professionals with two-layer tenant isolation through Prisma tenant context and Postgres row-level security. CI runs Semgrep, Gitleaks, OWASP ZAP, and generates a CycloneDX SBOM.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
-        'Security automation and guardrails for AWS accounts: IAM remediation, baseline controls, and operational hardening.',
+        'Security automation and guardrails for AWS accounts covering IAM remediation, baseline controls, and operational hardening.',
       wc2026Title: 'World Cup 2026 Prediction Simulator',
       wc2026Description:
         'TypeScript analytics simulator using Poisson modeling, Monte Carlo simulation, and AI-assisted insights.',
@@ -100,9 +109,9 @@ export const en = {
       stack: 'stack',
     },
     stats: [
-      { v: 'SOC2', k: 'Type I / II' },
+      { v: 'SOC 2', k: 'Type I / II' },
       { v: 'HIPAA', k: 'compliant infra' },
-      { v: '80%', k: 'faster deployments' },
+      { v: '95%', k: 'faster deployments' },
       { v: 'AI', k: 'enabled workflows' },
     ],
     roles: {
@@ -110,29 +119,40 @@ export const en = {
       devopsSecurityEngineer: 'DevOps & Security Engineer',
     },
     accomplishments: {
+      bamPlatform:
+        'Designed the Bam correspondent banking platform for Banco Agromercantil, serving more than 700 agents on ALB, Multi-AZ Auto Scaling, SQS with DLQ, and Aurora Global, with multi-region warm standby DR and automated failover through Lambda.',
+      bamCapacity:
+        'Reduced Bam peak web capacity from 7 to 2 instances through load testing and Performance Insights.',
+      scmMigration:
+        'Executed an SCM migration with automation and AI, sized for a team of four, consolidating thousands of repositories with source code, build artifacts, and Docker images from 21 Spirent source systems into 2 Keysight systems, an estimated 100 TB.',
+      cloudFormationMigration:
+        'Migrated a four-environment application from monolithic CloudFormation to Terraform with AWS DMS, completed in a one-hour window with no rollback.',
       multiCloudLeadership: 'Lead the operation and evolution of multi-cloud environments.',
       awsOwnership:
         'Own end-to-end AWS infrastructure initiatives from architecture and Terraform implementation to CI/CD integration.',
       complianceSecurity:
-        'Drove SOC2 Type I, then Type II, while keeping production infrastructure HIPAA compliant.',
+        'Lead SOC 2 Type I and Type II and ISO 27001 across the organization, and HIPAA compliance for four healthcare projects.',
       cicdOptimization:
         'Designed CI/CD with blue-green production deployments, reducing release risk and keeping platforms online.',
       devopsPracticeBuilt:
-        'Built the DevOps practice from near zero: pipelines, standards, production operations, and infrastructure ownership.',
+        'Built the DevOps practice from zero with Terraform, AWS CDK, CI/CD, engineering standards, and production operations.',
       teamLeadership:
         'Led and mentored engineers from foundations into capable infrastructure contributors.',
       productionOwnership:
-        'Owned initiatives end to end: from requirement discovery and architecture to deployment and production operation.',
+        'Owned initiatives end to end, from requirement discovery and architecture to deployment and production operation.',
       aiWorkflowAdoption:
-        'Integrated AI-assisted engineering into daily delivery: harness-driven execution and spec-driven development.',
+        'Brought AI-assisted engineering into daily delivery with agentic architectures on MCP, Spec Driven Development, and AIDLC.',
       automationTransformation:
         'Turned semi-manual delivery into an automated DevOps ecosystem across products and environments.',
       selfHostedMigration:
-        'Migrated delivery and source-control workflows toward self-hosted platforms such as GitLab.',
+        'Deployed and ran a self-hosted platform with GitLab and runners for hundreds of repositories and about 120 users, plus project management, analytics, secrets, and monitoring.',
       terraformConsolidation:
         'Consolidated fragmented infrastructure into reusable Terraform repositories and secure cloud foundations.',
       deploymentReduction:
-        'Built early delivery foundations with Linux, Docker, CircleCI, and GitLab CI, reducing deployment times by 80%.',
+        'Implemented delivery foundations with Linux, Docker, CircleCI, and GitLab CI, cutting deployments from 40 to 2 minutes, about 95% faster.',
+      availabilityImprovement:
+        'Raised production availability from downtime on every deployment to 99.9%, measured with UptimeRobot.',
+      costReduction: 'Reduced infrastructure costs by 40%.',
     },
   },
   certifications: {
@@ -144,6 +164,7 @@ export const en = {
       badgeAlt: 'badge',
       active: 'active',
       retired: 'retired',
+      upcoming: 'Upcoming ·',
     },
   },
   judo: {

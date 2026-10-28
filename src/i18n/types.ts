@@ -74,6 +74,12 @@ export interface Translations {
       language: string
     }
     items: {
+      ghostStockTitle: string
+      ghostStockDescription: string
+      atlasTitle: string
+      atlasDescription: string
+      appNutriTitle: string
+      appNutriDescription: string
       awsSecurityTitle: string
       awsSecurityDescription: string
       wc2026Title: string
@@ -96,6 +102,10 @@ export interface Translations {
       devopsSecurityEngineer: string
     }
     accomplishments: {
+      bamPlatform: string
+      bamCapacity: string
+      scmMigration: string
+      cloudFormationMigration: string
       multiCloudLeadership: string
       awsOwnership: string
       complianceSecurity: string
@@ -108,6 +118,8 @@ export interface Translations {
       selfHostedMigration: string
       terraformConsolidation: string
       deploymentReduction: string
+      availabilityImprovement: string
+      costReduction: string
     }
   }
   certifications: {
@@ -119,6 +131,7 @@ export interface Translations {
       badgeAlt: string
       active: string
       retired: string
+      upcoming: string
     }
   }
   judo: {
