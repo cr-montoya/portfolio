@@ -13,6 +13,7 @@ export const experienceEntries: readonly ExperienceEntry[] = [
       'devopsPracticeBuilt',
       'bamPlatform',
       'bamCapacity',
+      'scmMigration',
       'complianceSecurity',
       'productionOwnership',
       'teamLeadership',

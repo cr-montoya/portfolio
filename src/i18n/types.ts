@@ -100,6 +100,7 @@ export interface Translations {
     accomplishments: {
       bamPlatform: string
       bamCapacity: string
+      scmMigration: string
       cloudFormationMigration: string
       multiCloudLeadership: string
       awsOwnership: string

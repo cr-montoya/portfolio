@@ -117,6 +117,8 @@ export const es = {
         'Diseñé la plataforma de corresponsales bancarios de Bam, Banco Agromercantil, con más de 700 agentes sobre ALB, Auto Scaling Multi-AZ, SQS con DLQ y Aurora Global, con DR warm standby multirregión y failover automatizado vía Lambda.',
       bamCapacity:
         'Reduje la capacidad pico web de Bam de 7 a 2 instancias con pruebas de carga y Performance Insights.',
+      scmMigration:
+        'Ejecuté con automatización e IA una migración SCM dimensionada para un equipo de 4, consolidando miles de repositorios con código, artefactos de build e imágenes Docker de 21 sistemas de origen de Spirent en 2 sistemas de Keysight, unos 100 TB estimados.',
       cloudFormationMigration:
         'Migré una aplicación de cuatro ambientes de CloudFormation monolítico a Terraform con AWS DMS, en una ventana de una hora y sin rollback.',
       multiCloudLeadership: 'Lidero la operación y evolución de entornos multi-cloud.',
