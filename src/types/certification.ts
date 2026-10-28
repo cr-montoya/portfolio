@@ -12,9 +12,10 @@ export interface EarnedCertification extends CertificationBase {
   expiresDate?: string
 }
 
-// No Credly badge exists until the exam is passed, so there is no image or verify link.
+// Not earned yet: shows the public badge artwork dimmed, with no verify link.
 export interface UpcomingCertification extends CertificationBase {
   status: 'upcoming'
+  badgeImageUrl: string
   examDate: string
 }
 

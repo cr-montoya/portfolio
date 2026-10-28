@@ -42,9 +42,9 @@ export const es = {
     eyebrow: 'cloud productivo, construido con intención',
     kicker: 'nube en producción, construida con intención',
     body: [
-      'Soy Ingeniero Senior AWS DevOps en Medellín, Colombia, con 4+ años diseñando, automatizando, asegurando y operando entornos cloud productivos y resilientes.',
-      'Mi trabajo se centra en infraestructura como código, CI/CD, cargas contenerizadas, redes cloud, observabilidad, backup y recuperación ante desastres.',
-      'He liderado iniciativas AWS desde arquitectura e implementación con Terraform hasta automatización de entrega, apoyando cumplimiento SOC2/HIPAA y controles de seguridad más sólidos.',
+      'Soy Ingeniero Senior AWS DevOps en Medellín, Colombia, con más de 4 años diseñando soluciones en AWS de punta a punta, desde el requerimiento y la arquitectura hasta el despliegue en producción y su operación diaria.',
+      'Lidero DevOps y seguridad en Alternova, donde construí la práctica desde cero con Terraform, AWS CDK y CI/CD, diseñé una plataforma bancaria y lidero SOC 2, ISO 27001 e HIPAA.',
+      'Además construyo proyectos con Amazon Bedrock y arquitecturas agénticas sobre MCP, guiados por Spec Driven Development y AIDLC.',
     ],
     focusTitle: 'áreas de enfoque',
     focus: {
@@ -81,10 +81,10 @@ export const es = {
     items: {
       ghostStockTitle: 'GhostStock',
       ghostStockDescription:
-        'Inventario por foto en AWS. Amazon Bedrock (Converse API) responde con una única herramienta forzada y un esquema estricto sin campos de precio, cantidad ni SKU, así el modelo no puede inventar datos. Serverless con CDK v2, React 19 y gates de Playwright; specs escritas con Kiro, hecho en un día.',
+        'Inventario por foto en AWS. La Converse API de Amazon Bedrock responde con una única herramienta forzada y un esquema estricto sin campos de precio, cantidad ni SKU, así el modelo no puede inventar datos. Serverless con CDK v2, React 19 y gates de Playwright, con specs escritas en Kiro y hecho en un día.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
-        'Automatización y guardrails de seguridad para cuentas AWS: remediación IAM, controles base y hardening operativo.',
+        'Automatización y guardrails de seguridad para cuentas AWS con remediación IAM, controles base y hardening operativo.',
       wc2026Title: 'Simulador de Predicciones Mundial 2026',
       wc2026Description:
         'Simulador analítico en TypeScript con modelado Poisson, simulación Monte Carlo e insights asistidos por IA.',
@@ -103,7 +103,7 @@ export const es = {
       stack: 'stack',
     },
     stats: [
-      { v: 'SOC2', k: 'Type I / II' },
+      { v: 'SOC 2', k: 'Type I / II' },
       { v: 'HIPAA', k: 'infra conforme' },
       { v: '95%', k: 'deploys más rápidos' },
       { v: 'IA', k: 'workflows habilitados' },
@@ -113,31 +113,37 @@ export const es = {
       devopsSecurityEngineer: 'DevOps & Security Engineer',
     },
     accomplishments: {
+      bamPlatform:
+        'Diseñé la plataforma de corresponsales bancarios de Bam, Banco Agromercantil, con más de 700 agentes sobre ALB, Auto Scaling Multi-AZ, SQS con DLQ y Aurora Global, con DR warm standby multirregión y failover automatizado vía Lambda.',
+      bamCapacity:
+        'Reduje la capacidad pico web de Bam de 7 a 2 instancias con pruebas de carga y Performance Insights.',
+      cloudFormationMigration:
+        'Migré una aplicación de cuatro ambientes de CloudFormation monolítico a Terraform con AWS DMS, en una ventana de una hora y sin rollback.',
       multiCloudLeadership: 'Lidero la operación y evolución de entornos multi-cloud.',
       awsOwnership:
         'Soy responsable de iniciativas AWS end-to-end, desde arquitectura e implementación con Terraform hasta integración CI/CD.',
       complianceSecurity:
-        'Impulsé SOC2 Type I y luego Type II, manteniendo la infraestructura de producción HIPAA compliant.',
+        'Lidero SOC 2 Type I y Type II e ISO 27001 en toda la organización, y el cumplimiento HIPAA de cuatro proyectos de salud.',
       cicdOptimization:
         'Diseñé CI/CD con despliegues blue-green en producción, reduciendo riesgo de release y manteniendo plataformas online.',
       devopsPracticeBuilt:
-        'Construí la práctica DevOps casi desde cero: pipelines, estándares, operación en producción y ownership de infraestructura.',
+        'Construí la práctica DevOps desde cero con Terraform, AWS CDK, CI/CD, estándares de ingeniería y operación en producción.',
       teamLeadership:
         'Lideré y formé ingenieros desde fundamentos hasta perfiles capaces en infraestructura y delivery.',
       productionOwnership:
-        'Lideré iniciativas end to end: desde levantamiento de requerimientos y arquitectura hasta despliegue y operación.',
+        'Lideré iniciativas de punta a punta, desde el levantamiento de requerimientos y la arquitectura hasta el despliegue y la operación en producción.',
       aiWorkflowAdoption:
-        'Integré ingeniería asistida por IA en la entrega diaria: ejecución harness-driven y spec-driven development.',
+        'Integré ingeniería asistida por IA en la entrega diaria con arquitecturas agénticas sobre MCP, Spec Driven Development y AIDLC.',
       automationTransformation:
         'Convertí delivery semi-manual en un ecosistema DevOps automatizado para productos y entornos.',
       selfHostedMigration:
-        'Monté y administré una plataforma self-hosted: GitLab con cientos de repositorios y ~120 usuarios, gitlab-runner, Plane, AppFlowy, Coolify, PostHog, Pangolin, Passbolt y Uptime Kuma.',
+        'Desplegué y administré una plataforma self-hosted con GitLab y runners para cientos de repositorios y unos 120 usuarios, más gestión de proyectos, analítica, secretos y monitoreo.',
       terraformConsolidation:
         'Consolidé infraestructura fragmentada en repositorios Terraform reutilizables y bases cloud seguras.',
       deploymentReduction:
-        'Construí bases de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo los despliegues de 40 a 2 minutos (~95 %).',
+        'Implementé las bases de delivery con Linux, Docker, CircleCI y GitLab CI, reduciendo los despliegues de 40 a 2 minutos, cerca de un 95 % más rápido.',
       availabilityImprovement:
-        'Llevé producción de caídas en cada despliegue a 99,9 % de disponibilidad, medida con UptimeRobot.',
+        'Elevé la disponibilidad de producción de caídas en cada despliegue a 99,9 %, medida con UptimeRobot.',
       costReduction: 'Reduje los costos de infraestructura en 40 %.',
     },
   },
@@ -150,7 +156,7 @@ export const es = {
       badgeAlt: 'insignia',
       active: 'activo',
       retired: 'retirado',
-      upcoming: 'En curso · examen',
+      upcoming: 'Próximamente ·',
     },
   },
   judo: {

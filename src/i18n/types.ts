@@ -98,6 +98,9 @@ export interface Translations {
       devopsSecurityEngineer: string
     }
     accomplishments: {
+      bamPlatform: string
+      bamCapacity: string
+      cloudFormationMigration: string
       multiCloudLeadership: string
       awsOwnership: string
       complianceSecurity: string

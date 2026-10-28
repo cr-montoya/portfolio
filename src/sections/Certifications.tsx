@@ -1,6 +1,6 @@
 import { certifications } from '@/data/certifications'
 import { useTranslation } from '@/i18n'
-import { Card, SectionTitle, SectionWrapper } from '@/components/ui'
+import { Badge, Card, SectionTitle, SectionWrapper } from '@/components/ui'
 import type { Certification, EarnedCertification } from '@/types/certification'
 
 // Dates are stored as calendar dates; format in UTC so local offsets don't shift the month.
@@ -15,10 +15,7 @@ export function Certifications() {
     return new Date(cert.expiresDate) > new Date()
   }
 
-  const formatStatus = (cert: Certification) => {
-    if (cert.status === 'upcoming') {
-      return `${t.certifications.labels.upcoming} ${formatMonth(cert.examDate)}`
-    }
+  const formatStatus = (cert: EarnedCertification) => {
     const label = cert.expiresDate
       ? t.certifications.labels.expires
       : t.certifications.labels.issued
@@ -26,34 +23,31 @@ export function Certifications() {
   }
 
   const renderCard = (cert: Certification) => (
-    <Card
-      className={`flex h-full flex-col items-center gap-4 text-center ${cert.status === 'upcoming' ? 'border-dashed' : ''}`}
-    >
-      <div className="relative">
-        {cert.status === 'earned' ? (
-          <img
-            alt={`${cert.name} ${t.certifications.labels.badgeAlt}`}
-            className="size-24 object-contain transition-transform duration-300 group-hover:scale-105"
-            height={96}
-            loading="lazy"
-            src={cert.badgeImageUrl}
-            width={96}
-          />
-        ) : (
-          <div
-            aria-hidden="true"
-            className="size-24 rounded-full border-2 border-dashed border-text-dim"
-          />
-        )}
-      </div>
+    <Card className="flex h-full flex-col items-center gap-4 text-center">
+      <img
+        alt={`${cert.name} ${t.certifications.labels.badgeAlt}`}
+        className={`size-24 object-contain transition-transform duration-300 group-hover:scale-105 ${cert.status === 'upcoming' ? 'opacity-50 grayscale' : ''}`}
+        height={96}
+        loading="lazy"
+        src={cert.badgeImageUrl}
+        width={96}
+      />
       <div className="flex flex-1 flex-col gap-2">
         <h3 className="font-mono text-[13px] leading-5 text-text-primary">{cert.name}</h3>
         <p className="text-xs text-text-muted">{cert.issuer}</p>
         <div className="mt-auto flex items-center justify-center gap-2">
-          <span
-            className={`inline-block size-1.5 rounded-full ${cert.status === 'earned' && isActive(cert) ? 'bg-accent-red' : 'bg-text-dim'}`}
-          />
-          <p className="font-mono text-[11px] text-text-subtle">{formatStatus(cert)}</p>
+          {cert.status === 'upcoming' ? (
+            <Badge variant="outline">
+              {t.certifications.labels.upcoming} {formatMonth(cert.examDate)}
+            </Badge>
+          ) : (
+            <>
+              <span
+                className={`inline-block size-1.5 rounded-full ${isActive(cert) ? 'bg-accent-red' : 'bg-text-dim'}`}
+              />
+              <p className="font-mono text-[11px] text-text-subtle">{formatStatus(cert)}</p>
+            </>
+          )}
         </div>
       </div>
     </Card>

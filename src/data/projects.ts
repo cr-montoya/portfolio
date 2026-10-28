@@ -25,7 +25,6 @@ export const projects: readonly Project[] = [
     id: 'wc2026-prediction-simulator',
     nameWithOwner: 'cr-montoya/wc2026-prediction-simulator',
     repositoryUrl: 'https://github.com/cr-montoya/wc2026-prediction-simulator',
-    demoUrl: 'https://predicciones-mundial.pages.dev',
     primaryLanguage: 'TypeScript',
     topics: ['Analytics', 'AI', 'Monte Carlo', 'ISR'],
     featured: false,

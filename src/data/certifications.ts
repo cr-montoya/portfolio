@@ -17,6 +17,8 @@ export const certifications: Certification[] = [
     name: 'AWS Certified Security – Specialty',
     issuer: 'Amazon Web Services Training and Certification',
     status: 'upcoming',
+    badgeImageUrl:
+      'https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png',
     examDate: '2026-12-01',
   },
   {

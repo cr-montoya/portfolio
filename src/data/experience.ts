@@ -11,6 +11,8 @@ export const experienceEntries: readonly ExperienceEntry[] = [
     },
     accomplishmentsKeys: [
       'devopsPracticeBuilt',
+      'bamPlatform',
+      'bamCapacity',
       'complianceSecurity',
       'productionOwnership',
       'teamLeadership',
@@ -21,7 +23,8 @@ export const experienceEntries: readonly ExperienceEntry[] = [
       'AWS',
       'Terraform',
       'CI/CD',
-      'SOC2 Type I/II',
+      'SOC 2 Type I/II',
+      'ISO 27001',
       'HIPAA',
       'Blue-Green Deployments',
       'AI Workflows',
@@ -38,6 +41,7 @@ export const experienceEntries: readonly ExperienceEntry[] = [
     },
     accomplishmentsKeys: [
       'automationTransformation',
+      'cloudFormationMigration',
       'selfHostedMigration',
       'terraformConsolidation',
       'deploymentReduction',
