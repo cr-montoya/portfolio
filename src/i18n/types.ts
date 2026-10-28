@@ -76,6 +76,10 @@ export interface Translations {
     items: {
       ghostStockTitle: string
       ghostStockDescription: string
+      atlasTitle: string
+      atlasDescription: string
+      appNutriTitle: string
+      appNutriDescription: string
       awsSecurityTitle: string
       awsSecurityDescription: string
       wc2026Title: string

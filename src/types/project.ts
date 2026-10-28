@@ -3,6 +3,8 @@ import type { Translations } from '@/i18n/types'
 export interface Project {
   id:
     | 'ghoststock'
+    | 'atlas'
+    | 'app-nutri'
     | 'aws-account-security-toolkit'
     | 'wc2026-prediction-simulator'
     | 'aws-devops-pro-practice'

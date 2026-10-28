@@ -82,6 +82,12 @@ export const en = {
       ghostStockTitle: 'GhostStock',
       ghostStockDescription:
         'Photo-based inventory on AWS. Amazon Bedrock Converse API answers through one forced tool with a strict schema that has no price, quantity, or SKU fields, so the model cannot invent data. Serverless with CDK v2, React 19, and Playwright gates, with specs written in Kiro and built in one day.',
+      atlasTitle: 'Atlas',
+      atlasDescription:
+        'Local-first personal finance and athletic performance app with an agentic architecture. Headless agents run from an AI job queue with tools scoped per job type, Garmin and Polar data arrives through MCP, and every side effect is verified after each run. Private by design with local speech to text, covered by 550 tests, with a fictional-data demo that runs in three commands.',
+      appNutriTitle: 'AppNutri',
+      appNutriDescription:
+        'Early-stage multi-tenant SaaS for nutrition professionals with two-layer tenant isolation through Prisma tenant context and Postgres row-level security. CI runs Semgrep, Gitleaks, OWASP ZAP, and generates a CycloneDX SBOM.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
         'Security automation and guardrails for AWS accounts covering IAM remediation, baseline controls, and operational hardening.',
