@@ -82,6 +82,12 @@ export const es = {
       ghostStockTitle: 'GhostStock',
       ghostStockDescription:
         'Inventario por foto en AWS. La Converse API de Amazon Bedrock responde con una única herramienta forzada y un esquema estricto sin campos de precio, cantidad ni SKU, así el modelo no puede inventar datos. Serverless con CDK v2, React 19 y gates de Playwright, con specs escritas en Kiro y hecho en un día.',
+      atlasTitle: 'Atlas',
+      atlasDescription:
+        'App personal de finanzas y rendimiento deportivo, local first, con arquitectura agéntica. Agentes headless corren desde una cola de trabajos de IA con herramientas acotadas por tipo de trabajo, los datos de Garmin y Polar llegan por MCP y cada efecto secundario se verifica después de cada ejecución. Privada por diseño con transcripción de voz local, cubierta por 550 pruebas y con una demo de datos ficticios que corre en tres comandos.',
+      appNutriTitle: 'AppNutri',
+      appNutriDescription:
+        'SaaS multi-tenant en fase inicial para profesionales de nutrición, con aislamiento de tenants en dos capas mediante el contexto de tenant de Prisma y row-level security de Postgres. El CI corre Semgrep, Gitleaks y OWASP ZAP, y genera un SBOM CycloneDX.',
       awsSecurityTitle: 'AWS Account Security Toolkit',
       awsSecurityDescription:
         'Automatización y guardrails de seguridad para cuentas AWS con remediación IAM, controles base y hardening operativo.',
